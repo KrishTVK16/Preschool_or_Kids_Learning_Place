@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Bright Beginnings Preschool</title>
+    <link rel="icon" type="image/jpeg" href="assets/images/logo.jpg">
+    <link rel="shortcut icon" type="image/jpeg" href="assets/images/logo.jpg">
+    <link rel="apple-touch-icon" href="assets/images/logo.jpg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Nunito:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+    <link rel="stylesheet" href="assets/css/auth-animations.css">
+</head>
+<body>
+    <!-- Animated Background -->
+    <div class="auth-background">
+        <!-- Stars (5) -->
+        <div class="floating-star">⭐</div>
+        <div class="floating-star">⭐</div>
+        <div class="floating-star">⭐</div>
+        <div class="floating-star">⭐</div>
+        <div class="floating-star">⭐</div>
+        <!-- Cloud Left -->
+        <div class="floating-cloud" style="left: 3%; top: 5%;">☁️</div>
+        <!-- Cloud Right -->
+        <div class="floating-cloud" style="right: 8%; top: 8%;">☁️</div>
+        <!-- Sun Right -->
+        <div class="floating-sun" style="right: 25%; top: 5%;">☀️</div>
+        <!-- Moon Left -->
+        <div class="floating-moon" style="left: 22%; top: 18%;">🌙</div>
+        <!-- Rainbow Right -->
+        <div class="floating-rainbow" style="right: 15%; top: 10%;">🌈</div>
+    </div>
+
+    <!-- Content -->
+    <div class="auth-content-wrapper">
+        <div class="container" style="max-width: 500px;">
+            <div class="auth-card fade-in">
+                <div class="text-center" style="margin-bottom: var(--spacing-md);">
+                    <a href="index.html" style="text-decoration: none; color: inherit; display: inline-block;">
+                        <h1 style="margin-bottom: var(--spacing-xs); cursor: pointer; transition: var(--transition-base);">Bright Beginnings</h1>
+                    </a>
+                    <h2>Parent Portal Login</h2>
+                </div>
+                <form>
+                    <div class="auth-form-group">
+                        <input type="email" id="email" class="auth-form-input" required placeholder="Email Address">
+                    </div>
+                    <div class="auth-form-group">
+                        <input type="password" id="password" class="auth-form-input" required placeholder="Password">
+                    </div>
+                    <div class="auth-form-group" style="display: flex; justify-content: space-between; align-items: center; margin-bottom: var(--spacing-sm);">
+                        <label class="auth-checkbox-wrapper">
+                            <input type="checkbox" class="auth-checkbox">
+                            <span style="font-size: 0.9rem;">Remember me</span>
+                        </label>
+                        <a href="#" class="auth-link" style="font-size: 0.9rem;">Forgot password?</a>
+                    </div>
+                    <button type="submit" class="auth-btn">Login</button>
+                    <div class="text-center" style="margin-top: var(--spacing-sm);">
+                        <p class="text-gray-600" style="font-size: 0.9rem;">Don't have an account? <a href="register.html" class="auth-link">Register here</a></p>
+                    </div>
+                    <div class="auth-divider">Or login with</div>
+                    <div class="auth-social-buttons">
+                        <button type="button" class="auth-social-btn">
+                            <i class="fab fa-google"></i> Google
+                        </button>
+                        <button type="button" class="auth-social-btn">
+                            <i class="fab fa-facebook-f"></i> Facebook
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - Bright Beginnings Preschool</title>
+    <link rel="icon" type="image/jpeg" href="assets/images/logo.jpg">
+    <link rel="shortcut icon" type="image/jpeg" href="assets/images/logo.jpg">
+    <link rel="apple-touch-icon" href="assets/images/logo.jpg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Nunito:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container header-container">
+            <a href="index.html" class="logo">
+                <img src="assets/images/logo.jpg" alt="Bright Beginnings Logo" class="logo-img">
+                <span>Bright Beginnings</span>
+            </a>
+            <nav>
+                <ul class="nav-menu">
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <button class="theme-toggle" aria-label="Toggle dark mode"><i class="fas fa-moon"></i></button>
+                <a href="index.html" class="btn btn-outline btn-sm">Logout</a>
+            </div>
+        </div>
+    </header>
+    <section class="admin-header">
+        <div class="container">
+            <h1 style="color: var(--text-dark);">Admin Dashboard</h1>
+            <p style="color: var(--text-dark);">Manage students, teachers, and school operations</p>
+        </div>
+    </section>
+    <section class="container" style="margin-top: var(--spacing-xl);">
+        <div class="admin-stats">
+            <div class="card text-center">
+                <div class="stat-number">125</div>
+                <div class="stat-label">Total Students</div>
+            </div>
+            <div class="card text-center">
+                <div class="stat-number">12</div>
+                <div class="stat-label">Teachers</div>
+            </div>
+            <div class="card text-center">
+                <div class="stat-number">4</div>
+                <div class="stat-label">Programs</div>
+            </div>
+            <div class="card text-center">
+                <div class="stat-number">98%</div>
+                <div class="stat-label">Attendance Rate</div>
+            </div>
+        </div>
+    </section>
+    <section class="container" style="margin-top: var(--spacing-xl); margin-bottom: var(--spacing-3xl);">
+        <div class="card">
+            <h2 class="mb-md">Recent Applications</h2>
+            <div style="overflow-x: auto;">
+                <table class="admin-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Age</th>
+                            <th>Program</th>
+                            <th>Date</th>
+                            <th>Status</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Emma Wilson</td>
+                            <td>3 years</td>
+                            <td>Preschool</td>
+                            <td>2025-01-15</td>
+                            <td><span style="color: var(--mint-green); font-weight: 600;">Approved</span></td>
+                            <td><a href="#" style="color: var(--sky-blue);">View</a></td>
+                        </tr>
+                        <tr>
+                            <td>Lucas Martinez</td>
+                            <td>4 years</td>
+                            <td>Pre-K</td>
+                            <td>2025-01-14</td>
+                            <td><span style="color: var(--sunshine-yellow); font-weight: 600;">Pending</span></td>
+                            <td><a href="#" style="color: var(--sky-blue);">Review</a></td>
+                        </tr>
+                        <tr>
+                            <td>Sophia Chen</td>
+                            <td>2 years</td>
+                            <td>Toddler</td>
+                            <td>2025-01-13</td>
+                            <td><span style="color: var(--mint-green); font-weight: 600;">Approved</span></td>
+                            <td><a href="#" style="color: var(--sky-blue);">View</a></td>
+                        </tr>
+                        <tr>
+                            <td>Oliver Brown</td>
+                            <td>5 years</td>
+                            <td>After School</td>
+                            <td>2025-01-12</td>
+                            <td><span style="color: var(--sunshine-yellow); font-weight: 600;">Pending</span></td>
+                            <td><a href="#" style="color: var(--sky-blue);">Review</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+    <section class="container" style="margin-bottom: var(--spacing-3xl);">
+        <div class="stats-grid">
+            <div class="card">
+                <h3 class="mb-md">Quick Actions</h3>
+                <div style="display: flex; flex-direction: column; gap: var(--spacing-sm);">
+                    <a href="#" class="btn btn-primary">Add New Student</a>
+                    <a href="#" class="btn btn-secondary">Manage Teachers</a>
+                    <a href="#" class="btn btn-mint">View Reports</a>
+                    <a href="#" class="btn btn-lavender">Settings</a>
+                </div>
+            </div>
+            <div class="card">
+                <h3 class="mb-md">Upcoming Events</h3>
+                <div class="schedule-item">
+                    <span class="schedule-time">Jan 20</span>
+                    <span class="schedule-activity">Parent-Teacher Conference</span>
+                </div>
+                <div class="schedule-item">
+                    <span class="schedule-time">Jan 25</span>
+                    <span class="schedule-activity">Field Trip - Science Museum</span>
+                </div>
+                <div class="schedule-item">
+                    <span class="schedule-time">Feb 1</span>
+                    <span class="schedule-activity">Open House</span>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content-grid">
+                <div class="footer-logo-wrapper">
+                    <div class="footer-logo-text">Bright Beginnings</div>
+                    <p class="footer-text">Nurturing young minds with love, care, and quality early childhood education
+                        since 2008.</p>
+                </div>
+                <div>
+                    <h4>Quick Links</h4>
+                    <ul style="list-style: none;">
+                        <li style="margin-bottom: var(--spacing-xs);"><a href="about.html">About Us</a></li>
+                        <li style="margin-bottom: var(--spacing-xs);"><a href="programs.html">Programs</a></li>
+                        <li style="margin-bottom: var(--spacing-xs);"><a href="teachers.html">Teachers</a></li>
+                        <li style="margin-bottom: var(--spacing-xs);"><a href="admissions.html">Admissions</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Resources</h4>
+                    <ul style="list-style: none;">
+                        <li style="margin-bottom: var(--spacing-xs);"><a href="gallery.html">Gallery</a></li>
+                        <li style="margin-bottom: var(--spacing-xs);"><a href="activities.html">Activities</a></li>
+                        <li style="margin-bottom: var(--spacing-xs);"><a href="contact.html">Contact</a></li>
+                        <li style="margin-bottom: var(--spacing-xs);"><a href="login.html">Parent Portal</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Contact Info</h4>
+                    <p class="footer-contact-text">📍 123 Education Street<br>Learning City, LC 12345</p>
+                    <p class="footer-contact-text">📞 (555) 123-4567</p>
+                    <p class="footer-contact-text">✉️ info@brightbeginnings.com</p>
+                    <div style="display: flex; gap: var(--spacing-sm); margin-top: var(--spacing-md);">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Bright Beginnings Preschool. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
+

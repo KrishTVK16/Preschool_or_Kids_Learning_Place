@@ -1,0 +1,397 @@
+================================================================================
+HEADER DROPDOWN FUNCTIONALITY - COMPLETE DOCUMENTATION
+================================================================================
+
+This document provides a complete guide to understanding and implementing the 
+header dropdown functionality. Use this to remove all existing dropdown 
+functionality and implement this specific dropdown system.
+
+================================================================================
+1. HTML STRUCTURE
+================================================================================
+
+The dropdown is built using a nested list structure within the navigation menu.
+
+BASIC STRUCTURE:
+----------------
+<ul class="nav-menu">
+    <li class="nav-item-dropdown">
+        <a href="parent-page.html" class="nav-link has-dropdown">Parent Link Text</a>
+        <ul class="nav-dropdown">
+            <li><a href="child-page-1.html" class="nav-dropdown-link">Child Link 1</a></li>
+            <li><a href="child-page-2.html" class="nav-dropdown-link">Child Link 2</a></li>
+            <li><a href="child-page-3.html" class="nav-dropdown-link">Child Link 3</a></li>
+        </ul>
+    </li>
+    <!-- Regular nav items without dropdown -->
+    <li><a href="regular-page.html" class="nav-link">Regular Link</a></li>
+</ul>
+
+EXAMPLE FROM ACTUAL CODE:
+--------------------------
+<ul class="nav-menu">
+    <li class="nav-item-dropdown">
+        <a href="index.html" class="nav-link has-dropdown">Home</a>
+        <ul class="nav-dropdown">
+            <li><a href="index.html" class="nav-dropdown-link">Overview</a></li>
+            <li><a href="home-two.html" class="nav-dropdown-link">Featured</a></li>
+        </ul>
+    </li>
+    <li><a href="scholarships.html" class="nav-link">Scholarships</a></li>
+    <li><a href="about.html" class="nav-link">About</a></li>
+</ul>
+
+KEY HTML CLASSES:
+-----------------
+- "nav-item-dropdown" - Applied to the <li> container that holds the dropdown
+- "nav-link has-dropdown" - Applied to the parent link that triggers the dropdown
+- "nav-dropdown" - Applied to the <ul> that contains dropdown menu items
+- "nav-dropdown-link" - Applied to each <a> tag inside the dropdown menu
+- "active" - Applied to active links (both parent and child links)
+
+================================================================================
+2. CSS STYLING (components.css)
+================================================================================
+
+REQUIRED CSS CLASSES AND STYLES:
+---------------------------------
+
+/* Dropdown Container */
+.nav-item-dropdown {
+  position: relative;  /* Allows absolute positioning of dropdown */
+}
+
+/* Dropdown Menu (Hidden by Default) */
+.nav-dropdown {
+  position: absolute;
+  top: 100%;           /* Positioned directly below parent link */
+  left: 0;
+  background: var(--bg-secondary);
+  min-width: 200px;
+  box-shadow: var(--shadow-lg);
+  border-radius: var(--radius-md);
+  padding: var(--spacing-xs) 0;
+  list-style: none;
+  opacity: 0;          /* Hidden by default */
+  visibility: hidden; /* Hidden by default */
+  transform: translateY(-10px); /* Slight upward offset when hidden */
+  transition: var(--transition-base); /* Smooth animation */
+  z-index: 1000;       /* Above other content */
+  margin-top: var(--spacing-xs);
+  border: 1px solid rgba(30, 58, 138, 0.1);
+}
+
+/* Dropdown Menu (Visible when Active) */
+.nav-item-dropdown.active .nav-dropdown {
+  opacity: 1;          /* Fully visible */
+  visibility: visible; /* Fully visible */
+  transform: translateY(0); /* No offset when visible */
+}
+
+/* Dropdown Links */
+.nav-dropdown-link {
+  display: block;
+  padding: 10px 20px;
+  color: var(--primary) !important; /* Blue color in bright mode */
+  font-weight: 500;
+  text-decoration: none;
+  transition: var(--transition-base);
+  border-radius: 0;
+}
+
+/* Dropdown Link Hover */
+.nav-dropdown-link:hover {
+  background: rgba(30, 58, 138, 0.1);
+  color: #1E3A8A !important;
+  padding-left: 24px; /* Slight indent on hover */
+}
+
+/* Active Dropdown Link */
+.nav-dropdown-link.active {
+  background: rgba(30, 58, 138, 0.15);
+  color: var(--primary) !important;
+}
+
+/* Dark Mode Support */
+[data-theme="dark"] .nav-dropdown-link {
+  color: var(--text-primary) !important;
+}
+
+[data-theme="dark"] .nav-dropdown-link:hover {
+  color: var(--primary) !important;
+}
+
+================================================================================
+3. RESPONSIVE CSS (responsive.css)
+================================================================================
+
+MOBILE STYLES (max-width: 820px):
+----------------------------------
+
+.nav-item-dropdown {
+  width: 100%;
+}
+
+.nav-dropdown {
+  position: static;    /* Stack vertically on mobile */
+  opacity: 0;
+  visibility: hidden;
+  max-height: 0;       /* Collapsed by default */
+  overflow: hidden;
+  transition: max-height 0.3s ease, opacity 0.3s ease;
+}
+
+.nav-item-dropdown.active .nav-dropdown {
+  opacity: 1;
+  visibility: visible;
+  max-height: 200px;   /* Expand when active */
+}
+
+.nav-dropdown-link {
+  padding: 8px 16px;
+  color: var(--text-primary) !important;
+}
+
+================================================================================
+4. JAVASCRIPT FUNCTIONALITY (main.js)
+================================================================================
+
+COMPLETE DROPDOWN IMPLEMENTATION:
+----------------------------------
+
+The dropdown uses click events on desktop and mobile, with hover support 
+on desktop only.
+
+STEP 1: Initialize Dropdowns
+-----------------------------
+// Select all dropdown containers
+const dropdownItems = document.querySelectorAll('.nav-item-dropdown');
+
+// Ensure dropdowns are hidden by default
+dropdownItems.forEach(item => {
+  item.classList.remove('active');
+});
+
+STEP 2: Setup Click Functionality (Desktop & Mobile)
+-----------------------------------------------------
+dropdownItems.forEach(item => {
+  const dropdownLink = item.querySelector('.nav-link.has-dropdown');
+  const dropdownMenu = item.querySelector('.nav-dropdown');
+  
+  if (dropdownLink) {
+    dropdownLink.addEventListener('click', function(e) {
+      e.preventDefault();
+      e.stopPropagation();
+      
+      // Close other dropdowns
+      dropdownItems.forEach(otherItem => {
+        if (otherItem !== item) {
+          otherItem.classList.remove('active');
+        }
+      });
+      
+      // Toggle current dropdown
+      item.classList.toggle('active');
+    });
+  }
+});
+
+STEP 3: Setup Hover Functionality (Desktop Only)
+--------------------------------------------------
+const isMobile = window.innerWidth <= 820;
+
+if (!isMobile) {
+  dropdownItems.forEach(item => {
+    let dropdownTimeout = null;
+    
+    // Show dropdown on mouse enter
+    item.addEventListener('mouseenter', function() {
+      clearTimeout(dropdownTimeout);
+      item.classList.add('active');
+    });
+    
+    // Hide dropdown on mouse leave (with small delay)
+    item.addEventListener('mouseleave', function() {
+      dropdownTimeout = setTimeout(() => {
+        item.classList.remove('active');
+      }, 100);
+    });
+  });
+}
+
+STEP 4: Close Dropdown When Clicking Outside
+---------------------------------------------
+document.addEventListener('click', function(e) {
+  if (!e.target.closest('.nav-item-dropdown')) {
+    dropdownItems.forEach(item => {
+      item.classList.remove('active');
+    });
+  }
+});
+
+STEP 5: Active Link Detection
+------------------------------
+// Mark active links based on current page
+const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+const navLinks = document.querySelectorAll('.nav-link, .nav-dropdown-link');
+
+navLinks.forEach(link => {
+  const linkPage = link.getAttribute('href');
+  if (linkPage === currentPage || (currentPage === '' && linkPage === 'index.html')) {
+    link.classList.add('active');
+    
+    // If it's a dropdown link, mark parent link as active
+    const dropdownItem = link.closest('.nav-item-dropdown');
+    if (dropdownItem) {
+      const parentLink = dropdownItem.querySelector('.nav-link.has-dropdown');
+      if (parentLink) {
+        parentLink.classList.add('active');
+      }
+    }
+  }
+});
+
+================================================================================
+5. COMPLETE IMPLEMENTATION CHECKLIST
+================================================================================
+
+TO REMOVE EXISTING DROPDOWN AND IMPLEMENT THIS SYSTEM:
+
+STEP 1: Remove All Existing Dropdown Code
+-------------------------------------------
+- Search for any existing dropdown JavaScript code
+- Remove all dropdown-related event listeners
+- Remove any dropdown CSS that conflicts with this system
+- Remove any other dropdown HTML structures
+
+STEP 2: Add HTML Structure
+---------------------------
+- Ensure navigation uses the structure shown in Section 1
+- Add "nav-item-dropdown" class to dropdown container <li>
+- Add "has-dropdown" class to parent link
+- Add "nav-dropdown" class to dropdown <ul>
+- Add "nav-dropdown-link" class to each dropdown <a>
+
+STEP 3: Add CSS Styles
+-----------------------
+- Copy CSS from Section 2 to components.css
+- Copy responsive CSS from Section 3 to responsive.css
+- Ensure CSS variables are defined (--bg-secondary, --primary, etc.)
+
+STEP 4: Add JavaScript
+----------------------
+- Copy JavaScript code from Section 4 to main.js
+- Ensure it runs on DOMContentLoaded
+- Test click functionality on both desktop and mobile
+- Test hover functionality on desktop only
+
+STEP 5: Test Functionality
+---------------------------
+- Click parent link toggles dropdown (desktop & mobile)
+- Hover shows dropdown (desktop only)
+- Click outside closes dropdown
+- Active links are highlighted correctly
+- Mobile menu works correctly
+- Dark mode works correctly
+
+================================================================================
+6. KEY FEATURES
+================================================================================
+
+- Click to toggle dropdown (works on desktop and mobile)
+- Hover to show dropdown (desktop only, with delay on mouse leave)
+- Click outside to close dropdown
+- Only one dropdown open at a time
+- Active link highlighting
+- Smooth animations
+- Responsive design (mobile-friendly)
+- Dark mode support
+- Accessibility considerations
+
+================================================================================
+7. IMPORTANT NOTES
+================================================================================
+
+- The dropdown is hidden by default (opacity: 0, visibility: hidden)
+- The "active" class on .nav-item-dropdown makes the dropdown visible
+- Mobile breakpoint is 820px
+- Dropdown uses z-index: 1000 to appear above other content
+- Parent link prevents default behavior when clicked (e.preventDefault())
+- Timeout delay prevents accidental closing when moving mouse between parent 
+  and dropdown menu
+
+================================================================================
+8. EXAMPLE IMPLEMENTATION
+================================================================================
+
+FULL EXAMPLE HTML:
+-----------------
+<header class="header">
+    <nav class="navbar">
+        <a href="index.html" class="logo">
+            <img src="logo10.png" alt="Logo" class="logo-img">
+            <span>ScholarHub</span>
+        </a>
+        <ul class="nav-menu">
+            <!-- Dropdown Item -->
+            <li class="nav-item-dropdown">
+                <a href="index.html" class="nav-link has-dropdown">Home</a>
+                <ul class="nav-dropdown">
+                    <li><a href="index.html" class="nav-dropdown-link">Overview</a></li>
+                    <li><a href="home-two.html" class="nav-dropdown-link">Featured</a></li>
+                </ul>
+            </li>
+            <!-- Regular Item -->
+            <li><a href="scholarships.html" class="nav-link">Scholarships</a></li>
+            <li><a href="about.html" class="nav-link">About</a></li>
+        </ul>
+    </nav>
+</header>
+
+MINIMAL JAVASCRIPT NEEDED:
+--------------------------
+document.addEventListener('DOMContentLoaded', function() {
+  const dropdownItems = document.querySelectorAll('.nav-item-dropdown');
+  const isMobile = window.innerWidth <= 820;
+  let dropdownTimeout = null;
+  
+  dropdownItems.forEach(item => {
+    const dropdownLink = item.querySelector('.nav-link.has-dropdown');
+    
+    if (dropdownLink) {
+      // Click functionality
+      dropdownLink.addEventListener('click', function(e) {
+        e.preventDefault();
+        e.stopPropagation();
+        dropdownItems.forEach(other => {
+          if (other !== item) other.classList.remove('active');
+        });
+        item.classList.toggle('active');
+      });
+      
+      // Hover functionality (desktop only)
+      if (!isMobile) {
+        item.addEventListener('mouseenter', function() {
+          clearTimeout(dropdownTimeout);
+          item.classList.add('active');
+        });
+        item.addEventListener('mouseleave', function() {
+          dropdownTimeout = setTimeout(() => {
+            item.classList.remove('active');
+          }, 100);
+        });
+      }
+    }
+  });
+  
+  // Close on outside click
+  document.addEventListener('click', function(e) {
+    if (!e.target.closest('.nav-item-dropdown')) {
+      dropdownItems.forEach(item => item.classList.remove('active'));
+    }
+  });
+});
+
+================================================================================
+END OF DOCUMENTATION
+================================================================================

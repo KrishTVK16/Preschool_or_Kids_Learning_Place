@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Bright Beginnings Preschool</title>
+    <link rel="icon" type="image/jpeg" href="assets/images/logo.jpg">
+    <link rel="shortcut icon" type="image/jpeg" href="assets/images/logo.jpg">
+    <link rel="apple-touch-icon" href="assets/images/logo.jpg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Nunito:wght@300;400;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="container header-container">
+            <a href="index.html" class="logo">
+                <img src="assets/images/logo.jpg" alt="Bright Beginnings Logo" class="logo-img">
+                <span>Bright Beginnings</span>
+            </a>
+            <nav>
+                <ul class="nav-menu">
+                    <li class="nav-item-dropdown">
+                        <a href="index.html" class="nav-link has-dropdown">Home</a>
+                        <ul class="nav-dropdown">
+                            <li><a href="index.html" class="nav-dropdown-link">KidStart</a></li>
+                            <li><a href="home2.html" class="nav-dropdown-link">KidBloom</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="about.html" class="nav-link">About</a></li>
+                    <li><a href="contact.html" class="nav-link active">Contact</a></li>
+                    <li class="nav-item-dropdown">
+                        <a href="#" class="nav-link has-dropdown">More</a>
+                        <ul class="nav-dropdown">
+                            <li><a href="teachers.html" class="nav-dropdown-link">Teachers</a></li>
+                            <li><a href="programs.html" class="nav-dropdown-link">All Programs</a></li>
+                            <li><a href="activities.html" class="nav-dropdown-link">Activities</a></li>
+                            <li><a href="gallery.html" class="nav-dropdown-link">Gallery</a></li>
+                            <li><a href="admissions.html" class="nav-dropdown-link">Admissions</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <button class="theme-toggle" aria-label="Toggle dark mode"><i class="fas fa-moon"></i></button>
+                <a href="admin.html" class="btn btn-lavender btn-sm admin-btn-desktop">Admin</a>
+                <a href="login.html" class="btn btn-outline btn-sm">Login</a>
+                <a href="register.html" class="btn btn-primary btn-sm">Sign Up</a>
+                <button class="mobile-menu-toggle" aria-label="Toggle mobile menu"><i class="fas fa-bars"></i></button>
+            </div>
+    </header>
+    <div class="mobile-menu-overlay"></div>
+    <div class="mobile-menu">
+        <button class="mobile-menu-close" aria-label="Close menu"><i class="fas fa-times"></i></button>
+        <ul class="nav-menu">
+            <li><a href="index.html" class="nav-link">KidStart</a></li>
+            <li><a href="home2.html" class="nav-link">KidBloom</a></li>
+            <li><a href="about.html" class="nav-link">About</a></li>
+            <li><a href="contact.html" class="nav-link active">Contact</a></li>
+            <li><a href="teachers.html" class="nav-link">Teachers</a></li>
+            <li><a href="programs.html" class="nav-link">Programs</a></li>
+            <li><a href="activities.html" class="nav-link">Activities</a></li>
+            <li><a href="gallery.html" class="nav-link">Gallery</a></li>
+            <li><a href="admissions.html" class="nav-link">Admissions</a></li>
+            <li style="margin-top: var(--spacing-md);"><a href="admin.html" class="btn btn-lavender btn-sm"
+                    style="width: 100%; text-align: center;">Admin</a></li>
+            <li style="margin-top: var(--spacing-xs);"><a href="login.html" class="btn btn-outline btn-sm"
+                    style="width: 100%; text-align: center;">Login</a></li>
+            <li style="margin-top: var(--spacing-xs);"><a href="register.html" class="btn btn-primary btn-sm"
+                    style="width: 100%; text-align: center;">Sign Up</a></li>
+        </ul>
+    </div>
+    <section class="page-header">
+        <div class="container">
+            <div class="page-header-content">
+                <h1>Contact Us</h1>
+                <p>We'd love to hear from you. Get in touch with us today!</p>
+            </div>
+        </div>
+    </section>
+    <section class="container" style="margin-top: var(--spacing-3xl);">
+        <div style="max-width: 600px; margin: 0 auto;">
+            <div class="fade-in">
+                <div class="card">
+                    <h3 class="mb-md text-center">Send us a Message</h3>
+                    <form>
+                        <div class="form-group">
+                            <label for="name" class="form-label">Name *</label>
+                            <input type="text" id="name" class="form-input" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email" class="form-label">Email *</label>
+                            <input type="email" id="email" class="form-input" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone" class="form-label">Phone</label>
+                            <input type="tel" id="phone" class="form-input">
+                        </div>
+                        <div class="form-group">
+                            <label for="subject" class="form-label">Subject</label>
+                            <select id="subject" class="form-select">
+                                <option>General Inquiry</option>
+                                <option>Admissions</option>
+                                <option>Tour Request</option>
+                                <option>Other</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="message" class="form-label">Message *</label>
+                            <textarea id="message" class="form-textarea" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary w-full">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="container" style="margin-top: var(--spacing-3xl);">
+        <div class="text-center mb-xl">
+            <h3 class="mb-md">Get in Touch</h3>
+            <p class="text-lg text-gray-600">Have questions? Want to schedule a tour? We're here to help!</p>
+        </div>
+        <div class="stats-grid"
+            style="grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: var(--spacing-md);">
+            <div class="info-card fade-in" style="min-width: 0; max-width: 100%;">
+                <div class="info-card-icon info-card-icon-sky">📍</div>
+                <div class="info-card-content" style="min-width: 0; flex: 1;">
+                    <h4>Address</h4>
+                    <p style="word-wrap: break-word; overflow-wrap: break-word;">123 Education Street<br>Learning City,
+                        LC 12345</p>
+                </div>
+            </div>
+            <div class="info-card fade-in" style="min-width: 0; max-width: 100%;">
+                <div class="info-card-icon info-card-icon-mint">📞</div>
+                <div class="info-card-content" style="min-width: 0; flex: 1;">
+                    <h4>Phone</h4>
+                    <p style="word-wrap: break-word; overflow-wrap: break-word;">Main: (555) 123-4567<br>Fax: (555)
+                        123-4568</p>
+                </div>
+            </div>
+            <div class="info-card fade-in" style="min-width: 0; max-width: 100%;">
+                <div class="info-card-icon info-card-icon-yellow">✉️</div>
+                <div class="info-card-content" style="min-width: 0; flex: 1;">
+                    <h4>Email</h4>
+                    <p style="word-wrap: break-word; overflow-wrap: break-word;">
+                        info@brightbeginnings.com<br>admissions@brightbeginnings.com</p>
+                </div>
+            </div>
+            <div class="info-card fade-in" style="min-width: 0; max-width: 100%;">
+                <div class="info-card-icon info-card-icon-lavender">🕒</div>
+                <div class="info-card-content" style="min-width: 0; flex: 1;">
+                    <h4>Hours</h4>
+                    <p style="word-wrap: break-word; overflow-wrap: break-word;">Monday - Friday: 7:00 AM - 6:00
+                        PM<br>Saturday: 9:00 AM - 1:00 PM</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="container" style="margin-top: var(--spacing-3xl); margin-bottom: var(--spacing-3xl);">
+        <div class="text-center mb-xl">
+            <h2>Frequently Asked Questions</h2>
+        </div>
+        <div style="max-width: 800px; margin: 0 auto;">
+            <div class="faq-item fade-in">
+                <button class="faq-question">What are your operating hours?</button>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        <p>We are open Monday through Friday from 7:00 AM to 6:00 PM, and Saturdays from 9:00 AM to 1:00
+                            PM. We are closed on Sundays and major holidays.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="faq-item fade-in">
+                <button class="faq-question">What age groups do you serve?</button>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        <p>We serve children from 18 months to 12 years old, with programs for toddlers (18 months - 2.5
+                            years), preschoolers (2.5 - 4 years), pre-K (4 - 5 years), and after-school care (5 - 12
+                            years).</p>
+                    </div>
+                </div>
+            </div>
+            <div class="faq-item fade-in">
+                <button class="faq-question">How do I schedule a tour?</button>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        <p>You can schedule a tour by calling us at (555) 123-4567, emailing
+                            admissions@brightbeginnings.com, or filling out the contact form above. We offer tours
+                            Monday through Friday between 9:00 AM and 4:00 PM.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="faq-item fade-in">
+                <button class="faq-question">What is your teacher-to-child ratio?</button>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        <p>Our ratios vary by program: Toddler Program (1:4), Preschool Program (1:6), Pre-K Program
+                            (1:8), and After School (1:10). These ratios exceed state requirements to ensure
+                            individualized attention.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="faq-item fade-in">
+                <button class="faq-question">Do you provide meals?</button>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        <p>Yes, we provide nutritious morning and afternoon snacks. Parents can choose to pack lunch or
+                            purchase our hot lunch program. All meals follow nutritional guidelines and accommodate
+                            dietary restrictions.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content-grid">
+                <div class="footer-logo-wrapper">
+                    <div class="footer-logo-text">Bright Beginnings</div>
+                    <p class="footer-text">Nurturing young minds with love, care, and quality early childhood education
+                        since 2008.</p>
+                </div>
+                <div>
+                    <h4>Quick Links</h4>
+                    <ul style="list-style: none;">
+                        <li style="margin-bottom: var(--spacing-xs);"><a href="about.html">About Us</a></li>
+                        <li style="margin-bottom: var(--spacing-xs);"><a href="programs.html">Programs</a></li>
+                        <li style="margin-bottom: var(--spacing-xs);"><a href="teachers.html">Teachers</a></li>
+                        <li style="margin-bottom: var(--spacing-xs);"><a href="admissions.html">Admissions</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Resources</h4>
+                    <ul style="list-style: none;">
+                        <li style="margin-bottom: var(--spacing-xs);"><a href="gallery.html">Gallery</a></li>
+                        <li style="margin-bottom: var(--spacing-xs);"><a href="activities.html">Activities</a></li>
+                        <li style="margin-bottom: var(--spacing-xs);"><a href="contact.html">Contact</a></li>
+                        <li style="margin-bottom: var(--spacing-xs);"><a href="login.html">Parent Portal</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Contact Info</h4>
+                    <p class="footer-contact-text">📍 123 Education Street<br>Learning City, LC 12345</p>
+                    <p class="footer-contact-text">📞 (555) 123-4567</p>
+                    <p class="footer-contact-text">✉️ info@brightbeginnings.com</p>
+                    <div style="display: flex; gap: var(--spacing-sm); margin-top: var(--spacing-md);">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Bright Beginnings Preschool. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>

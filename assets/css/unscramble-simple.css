@@ -1,0 +1,209 @@
+/* ============================================
+   SIMPLE UNSCRAMBLE - MULTIPLE CHOICE
+   ============================================ */
+
+.unscramble-simple-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: var(--spacing-xl);
+}
+
+.unscramble-section {
+  background: var(--bg-primary);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-lg);
+  margin-bottom: var(--spacing-lg);
+  box-shadow: var(--shadow-sm);
+  border: 2px solid var(--border-color);
+  transition: all 0.3s ease;
+}
+
+.unscramble-section.revealed {
+  border-color: var(--mint-green);
+  padding: var(--spacing-md);
+  background: rgba(16, 185, 129, 0.05);
+}
+
+/* Scrambled Letters Display */
+.scrambled-display {
+  text-align: center;
+  margin-bottom: var(--spacing-md);
+}
+
+.scrambled-letters {
+  display: inline-flex;
+  gap: var(--spacing-xs);
+  flex-wrap: wrap;
+  justify-content: center;
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  color: var(--text-primary);
+  padding: var(--spacing-md);
+  background: var(--bg-secondary);
+  border-radius: var(--radius-md);
+  margin: var(--spacing-sm) 0;
+}
+
+/* Guess Options */
+.guess-options {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+  margin-bottom: var(--spacing-md);
+}
+
+.guess-option {
+  padding: var(--spacing-md) var(--spacing-lg);
+  background: var(--bg-secondary);
+  border: 2px solid var(--border-color);
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-align: center;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.guess-option:hover {
+  background: var(--gradient-sky);
+  color: var(--white);
+  border-color: var(--sky-blue);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.guess-option.correct {
+  background: var(--gradient-mint);
+  color: var(--white);
+  border-color: var(--mint-green);
+  animation: correctPulse 0.5s ease;
+}
+
+.guess-option.wrong {
+  background: var(--gray-300);
+  color: var(--gray-600);
+  border-color: var(--gray-400);
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.guess-option.disabled {
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+@keyframes correctPulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(16, 185, 129, 0.5);
+  }
+}
+
+/* Section Content */
+.section-content {
+  display: none;
+  margin-top: var(--spacing-md);
+  padding-top: var(--spacing-md);
+  border-top: 2px solid var(--border-color);
+  animation: fadeIn 0.5s ease;
+}
+
+.section-content.revealed {
+  display: block;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.section-content h3 {
+  text-align: center;
+  color: var(--sky-blue);
+  margin-bottom: var(--spacing-sm);
+  font-size: 1.3rem;
+}
+
+.section-content p {
+  text-align: center;
+  line-height: 1.6;
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  margin-bottom: var(--spacing-sm);
+}
+
+.section-content .card {
+  margin-top: var(--spacing-sm);
+}
+
+/* Success Message */
+.success-badge {
+  text-align: center;
+  padding: var(--spacing-xs) var(--spacing-md);
+  background: var(--gradient-mint);
+  color: var(--white);
+  border-radius: var(--radius-full);
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-bottom: var(--spacing-sm);
+  display: inline-block;
+  width: 100%;
+}
+
+/* Header */
+.unscramble-header {
+  text-align: center;
+  margin-bottom: var(--spacing-xl);
+}
+
+.unscramble-title {
+  font-size: 2rem;
+  margin-bottom: var(--spacing-sm);
+  color: var(--text-primary);
+}
+
+.unscramble-subtitle {
+  color: var(--text-secondary);
+  font-size: 1rem;
+}
+
+/* Progress */
+.unscramble-progress {
+  text-align: center;
+  margin-bottom: var(--spacing-lg);
+  padding: var(--spacing-sm);
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .unscramble-simple-container {
+    padding: var(--spacing-md);
+  }
+  
+  .unscramble-section {
+    padding: var(--spacing-md);
+  }
+  
+  .scrambled-letters {
+    font-size: 1.5rem;
+  }
+  
+  .guess-option {
+    font-size: 1rem;
+    padding: var(--spacing-sm) var(--spacing-md);
+  }
+}
+
