@@ -20,6 +20,7 @@
     initFAQAccordion();
     initCounterAnimations();
     initMapInteraction();
+    initBackToTop();
   });
 
   // ============================================
@@ -667,6 +668,43 @@
       }
     });
   });
+
+  // ============================================
+  // 14. BACK TO TOP BUTTON
+  // ============================================
+
+  function initBackToTop() {
+    const backToTopButton = document.querySelector('.back-to-top');
+    
+    if (!backToTopButton) return;
+    
+    // Show/hide button based on scroll position
+    let scrollTimeout;
+    function handleScroll() {
+      clearTimeout(scrollTimeout);
+      scrollTimeout = setTimeout(function() {
+        if (window.pageYOffset > 300) {
+          backToTopButton.classList.add('visible');
+        } else {
+          backToTopButton.classList.remove('visible');
+        }
+      }, 10);
+    }
+    
+    // Use passive listener for better performance
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    
+    // Scroll to top on click
+    backToTopButton.addEventListener('click', function() {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    });
+    
+    // Initial check
+    handleScroll();
+  }
 
   // ============================================
   // END OF MAIN JAVASCRIPT

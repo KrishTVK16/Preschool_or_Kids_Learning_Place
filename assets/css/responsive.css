@@ -13,15 +13,45 @@
 
   .header-container {
     padding: var(--spacing-sm);
+    gap: var(--spacing-xs);
+    min-height: 60px;
   }
 
   .logo {
-    font-size: 1.25rem;
+    font-size: 1.1rem;
     white-space: nowrap;
+    gap: var(--spacing-xs);
+    flex-shrink: 1;
+    min-width: 0;
   }
   
   .logo span {
     white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 120px;
+  }
+
+  .logo-img {
+    width: 32px;
+    height: 32px;
+    flex-shrink: 0;
+  }
+
+  .header-actions {
+    gap: var(--spacing-xs);
+    flex-shrink: 0;
+  }
+
+  .theme-toggle {
+    width: 36px;
+    height: 36px;
+    font-size: 0.875rem;
+  }
+
+  .mobile-menu-toggle {
+    font-size: 1.25rem;
+    padding: var(--spacing-xs);
   }
 
   .btn {
@@ -71,6 +101,33 @@
    ============================================ */
 
 @media (max-width: 375px) {
+  .header-container {
+    padding: var(--spacing-sm) var(--spacing-xs);
+    gap: var(--spacing-sm);
+  }
+
+  .logo-title {
+    font-size: 1.1rem;
+  }
+
+  .logo-subtitle {
+    font-size: 0.9rem;
+  }
+
+  .logo-img {
+    width: 36px;
+    height: 36px;
+  }
+
+  .header-actions {
+    gap: var(--spacing-xs);
+  }
+
+  .theme-toggle {
+    width: 38px;
+    height: 38px;
+  }
+
   .stats-grid {
     grid-template-columns: 1fr;
   }
@@ -90,6 +147,28 @@
    ============================================ */
 
 @media (max-width: 425px) {
+  .header-container {
+    padding: var(--spacing-sm);
+    gap: var(--spacing-sm);
+  }
+
+  .logo-title {
+    font-size: 1.2rem;
+  }
+
+  .logo-subtitle {
+    font-size: 0.95rem;
+  }
+
+  .logo-img {
+    width: 38px;
+    height: 38px;
+  }
+
+  .header-actions {
+    gap: var(--spacing-xs);
+  }
+
   .footer-content-grid {
     grid-template-columns: 1fr;
     gap: var(--spacing-lg);
@@ -105,6 +184,20 @@
 }
 
 /* ============================================
+   TESTIMONIALS SECTION (≤ 600px)
+   ============================================ */
+
+@media (max-width: 600px) {
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .info-grid-2x2 {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ============================================
    TABLET PORTRAIT (≤ 780px)
    ============================================ */
 
@@ -112,11 +205,24 @@
   .header-container {
     flex-wrap: wrap;
     justify-content: space-between;
+    align-items: center;
+    padding: var(--spacing-sm) var(--container-padding);
   }
 
   .header-container>.logo,
   .header-container>.header-actions {
     position: static;
+  }
+
+  .header-container>.logo {
+    flex: 0 1 auto;
+    min-width: 0;
+  }
+
+  .header-container>.header-actions {
+    flex: 0 0 auto;
+    display: flex;
+    align-items: center;
   }
 
   .header-container>nav {
@@ -178,13 +284,16 @@
     margin: 0 auto;
   }
 
-  .stats-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
+  /* Stats grid: 2 columns only above 600px within this breakpoint */
+  @media (min-width: 601px) and (max-width: 780px) {
+    .stats-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
 
-  .info-grid-2x2 {
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: auto;
+    .info-grid-2x2 {
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: auto;
+    }
   }
 
   .activities-grid {
@@ -396,6 +505,30 @@
 
   html {
     scroll-behavior: auto;
+  }
+}
+
+/* ============================================
+   BACK TO TOP BUTTON RESPONSIVE
+   ============================================ */
+
+@media (max-width: 768px) {
+  .back-to-top {
+    width: 45px;
+    height: 45px;
+    bottom: 1.5rem;
+    right: 1.5rem;
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .back-to-top {
+    width: 40px;
+    height: 40px;
+    bottom: 1rem;
+    right: 1rem;
+    font-size: 1rem;
   }
 }
 

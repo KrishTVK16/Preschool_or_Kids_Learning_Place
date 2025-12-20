@@ -380,26 +380,30 @@ ol {
 .header-container {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   padding: var(--spacing-md) var(--container-padding);
   gap: var(--spacing-xl);
   position: relative;
+  min-height: 70px;
 }
 
 .header-container>.logo {
   position: absolute;
   left: var(--container-padding);
+  z-index: 1;
 }
 
 .header-container>.header-actions {
   position: absolute;
   right: var(--container-padding);
+  z-index: 1;
 }
 
 .header-container>nav {
   flex: 1;
   display: flex;
   justify-content: center;
+  z-index: 0;
 }
 
 .logo {
@@ -407,21 +411,69 @@ ol {
   align-items: center;
   gap: var(--spacing-sm);
   font-family: var(--font-heading);
+  color: var(--text-primary);
+  flex-shrink: 1;
+  min-width: 0;
+  text-decoration: none;
+  transition: var(--transition-fast);
+}
+
+.logo:hover {
+  opacity: 0.9;
+}
+
+.logo-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.2;
+  gap: 0;
+  align-items: flex-start;
+  text-align: left;
+}
+
+.logo-title {
   font-size: 1.5rem;
   font-weight: 700;
   color: var(--text-primary);
   white-space: nowrap;
-  flex-shrink: 0;
+  line-height: 1.1;
+  text-align: left;
 }
 
-.logo span {
+.logo-subtitle {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--text-primary);
   white-space: nowrap;
+  line-height: 1.1;
+  opacity: 0.9;
+  text-align: left;
+}
+
+/* Center logo in auth pages (login/register) */
+.auth-card .logo,
+.auth-content-wrapper .logo {
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.auth-card .text-center .logo,
+.auth-content-wrapper .text-center .logo {
+  display: inline-flex;
+  margin: 0 auto;
+}
+
+.auth-card .logo-text,
+.auth-content-wrapper .logo-text {
+  align-items: flex-start;
+  text-align: left;
 }
 
 .logo-img {
   width: 40px;
   height: 40px;
   object-fit: contain;
+  flex-shrink: 0;
 }
 
 .nav-menu {
@@ -515,6 +567,7 @@ ol {
   display: flex;
   align-items: center;
   gap: var(--spacing-sm);
+  flex-shrink: 0;
 }
 
 .mobile-menu-toggle {
@@ -1498,10 +1551,19 @@ ol {
   margin-bottom: var(--spacing-lg);
 }
 
+.footer-content-grid > div {
+  min-width: 0;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+}
+
 .footer-logo-wrapper {
   display: flex;
   flex-direction: column;
   gap: var(--spacing-sm);
+  min-width: 0;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
 }
 
 .footer-logo-text {
@@ -1515,11 +1577,17 @@ ol {
 .footer-text {
   color: var(--text-light-secondary);
   line-height: 1.6;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  word-break: break-word;
 }
 
 .footer-contact-text {
   color: var(--text-light-secondary);
   margin-bottom: var(--spacing-xs);
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  word-break: break-word;
 }
 
 .footer h4 {
@@ -1531,6 +1599,9 @@ ol {
 .footer a {
   color: var(--text-light-secondary);
   transition: var(--transition-fast);
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  word-break: break-word;
 }
 
 .footer a:hover {
@@ -1541,6 +1612,9 @@ ol {
   text-align: center;
   padding-top: var(--spacing-md);
   border-top: 1px solid var(--border-dark);
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  word-break: break-word;
   color: var(--text-light-secondary);
 }
 
@@ -2142,6 +2216,60 @@ body.mobile-menu-open .header-actions a[href="register.html"] {
 
 .admin-table tr:hover {
   background: var(--gray-100);
+}
+
+/* ============================================
+   28. BACK TO TOP BUTTON
+   ============================================ */
+
+.back-to-top {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  width: 50px;
+  height: 50px;
+  background: var(--sky-blue);
+  color: var(--white);
+  border: none;
+  border-radius: var(--radius-full);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+  box-shadow: var(--shadow-lg);
+  z-index: 999;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(20px);
+  transition: var(--transition-base);
+}
+
+.back-to-top:hover {
+  background: #3d8fdd;
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-xl);
+}
+
+.back-to-top.visible {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.back-to-top:active {
+  transform: translateY(0) scale(0.95);
+}
+
+/* Dark mode support */
+[data-theme="dark"] .back-to-top {
+  background: var(--sky-blue);
+  box-shadow: 0 8px 24px rgba(77, 166, 255, 0.3);
+}
+
+[data-theme="dark"] .back-to-top:hover {
+  background: #3d8fdd;
+  box-shadow: 0 12px 32px rgba(77, 166, 255, 0.4);
 }
 
 /* ============================================

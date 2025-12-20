@@ -1,0 +1,304 @@
+/* ============================================
+   ABOUT PAGE - KID-FRIENDLY ANIMATIONS
+   ============================================ */
+
+/* Floating Elements Background */
+.about-floating-bg {
+  position: relative;
+  overflow: hidden;
+}
+
+.about-floating-bg::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    radial-gradient(circle at 20% 30%, rgba(77, 166, 255, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 80% 70%, rgba(255, 217, 61, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 50% 50%, rgba(110, 231, 183, 0.1) 0%, transparent 50%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Animated Counter Numbers */
+.counter-number {
+  font-size: 3.5rem;
+  font-weight: 700;
+  background: linear-gradient(135deg, var(--sky-blue), var(--mint-green));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: numberPulse 2s ease-in-out infinite;
+}
+
+@keyframes numberPulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+}
+
+/* Bouncing Icons */
+.bounce-icon {
+  display: inline-block;
+  animation: bounce 2s ease-in-out infinite;
+}
+
+.bounce-icon:nth-child(1) { animation-delay: 0s; }
+.bounce-icon:nth-child(2) { animation-delay: 0.2s; }
+.bounce-icon:nth-child(3) { animation-delay: 0.4s; }
+.bounce-icon:nth-child(4) { animation-delay: 0.6s; }
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-15px); }
+}
+
+/* Rotating Icons */
+.rotate-icon {
+  display: inline-block;
+  animation: rotate 3s linear infinite;
+}
+
+@keyframes rotate {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* Floating Cards */
+.float-card {
+  animation: float 3s ease-in-out infinite;
+  transition: transform 0.3s ease;
+}
+
+.float-card:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: var(--shadow-xl);
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-20px); }
+}
+
+/* Fun Facts Cards */
+.fun-fact-card {
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.fun-fact-card::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.3) 0%, transparent 70%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.fun-fact-card:hover::before {
+  opacity: 1;
+  animation: shimmer 1s ease-in-out;
+}
+
+.fun-fact-card:hover {
+  transform: scale(1.05) rotate(2deg);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+@keyframes shimmer {
+  0% { transform: translateX(-100%) translateY(-100%); }
+  100% { transform: translateX(100%) translateY(100%); }
+}
+
+/* Timeline Animation */
+.timeline-item {
+  position: relative;
+  opacity: 0;
+  transform: translateX(-30px);
+  transition: all 0.6s ease;
+}
+
+.timeline-item.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.timeline-dot {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: var(--sky-blue);
+  position: absolute;
+  left: -10px;
+  top: 0;
+  animation: pulse 2s ease-in-out infinite;
+  box-shadow: 0 0 0 0 rgba(77, 166, 255, 0.7);
+}
+
+@keyframes pulse {
+  0% { box-shadow: 0 0 0 0 rgba(77, 166, 255, 0.7); }
+  70% { box-shadow: 0 0 0 10px rgba(77, 166, 255, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(77, 166, 255, 0); }
+}
+
+/* Kid Testimonial Cards */
+.kid-testimonial {
+  position: relative;
+  background: linear-gradient(135deg, #fff 0%, #f9fafb 100%);
+  border-left: 4px solid var(--sky-blue);
+  transition: all 0.3s ease;
+}
+
+.kid-testimonial:hover {
+  transform: translateX(10px);
+  border-left-width: 6px;
+  box-shadow: var(--shadow-md);
+}
+
+.kid-avatar {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--sky-blue), var(--mint-green));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  animation: avatarBounce 2s ease-in-out infinite;
+}
+
+@keyframes avatarBounce {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+}
+
+/* Achievement Badges */
+.achievement-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+  padding: var(--spacing-xs) var(--spacing-sm);
+  background: linear-gradient(135deg, var(--sunshine-yellow), #FFE066);
+  border-radius: var(--radius-full);
+  font-weight: 600;
+  color: var(--text-dark);
+  animation: badgeShine 3s ease-in-out infinite;
+  box-shadow: 0 4px 15px rgba(255, 217, 61, 0.3);
+}
+
+@keyframes badgeShine {
+  0%, 100% { box-shadow: 0 4px 15px rgba(255, 217, 61, 0.3); }
+  50% { box-shadow: 0 4px 25px rgba(255, 217, 61, 0.6); }
+}
+
+/* Interactive Feature Cards */
+.feature-interactive {
+  position: relative;
+  overflow: hidden;
+}
+
+.feature-interactive::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.3);
+  transform: translate(-50%, -50%);
+  transition: width 0.6s, height 0.6s;
+}
+
+.feature-interactive:hover::after {
+  width: 300px;
+  height: 300px;
+}
+
+/* Stagger Animation for Grid Items */
+.stagger-item {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.6s ease;
+}
+
+.stagger-item.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.stagger-item:nth-child(1) { transition-delay: 0.1s; }
+.stagger-item:nth-child(2) { transition-delay: 0.2s; }
+.stagger-item:nth-child(3) { transition-delay: 0.3s; }
+.stagger-item:nth-child(4) { transition-delay: 0.4s; }
+.stagger-item:nth-child(5) { transition-delay: 0.5s; }
+.stagger-item:nth-child(6) { transition-delay: 0.6s; }
+
+/* Rainbow Text Effect */
+.rainbow-text {
+  background: linear-gradient(90deg, 
+    var(--sky-blue) 0%, 
+    var(--mint-green) 25%, 
+    var(--sunshine-yellow) 50%, 
+    var(--lavender-purple) 75%, 
+    var(--sky-blue) 100%);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: rainbow 3s linear infinite;
+}
+
+@keyframes rainbow {
+  to { background-position: 200% center; }
+}
+
+/* Sparkle Effect */
+.sparkle {
+  position: absolute;
+  font-size: 1.2rem;
+  opacity: 0;
+  animation: sparkle 2s ease-in-out infinite;
+}
+
+@keyframes sparkle {
+  0%, 100% { opacity: 0; transform: scale(0) rotate(0deg); }
+  50% { opacity: 1; transform: scale(1) rotate(180deg); }
+}
+
+/* Fun Facts Section - 3x2 Grid Layout */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--spacing-md);
+  margin: var(--spacing-xl) 0;
+  align-items: stretch;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .counter-number {
+    font-size: 2.5rem;
+  }
+  
+  .float-card {
+    animation-duration: 2s;
+  }
+  
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+}

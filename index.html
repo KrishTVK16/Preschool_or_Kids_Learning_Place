@@ -26,7 +26,10 @@
         <div class="container header-container">
             <a href="index.html" class="logo">
                 <img src="assets/images/logo.jpg" alt="Bright Beginnings Logo" class="logo-img">
-                <span>Bright Beginnings</span>
+                <div class="logo-text">
+                    <span class="logo-title">Bright</span>
+                    <span class="logo-subtitle">Beginnings</span>
+                </div>
             </a>
             <nav>
                 <ul class="nav-menu">
@@ -252,7 +255,13 @@
         <div class="container">
             <div class="footer-content-grid">
                 <div class="footer-logo-wrapper">
-                    <div class="footer-logo-text">Bright Beginnings</div>
+                    <div class="logo" style="display: flex; align-items: center; gap: var(--spacing-xs); margin-bottom: var(--spacing-sm);">
+                        <img src="assets/images/logo.jpg" alt="Bright Beginnings Logo" class="logo-img">
+                        <div class="logo-text">
+                            <span class="logo-title">Bright</span>
+                            <span class="logo-subtitle">Beginnings</span>
+                        </div>
+                    </div>
                     <p class="footer-text">Nurturing young minds with love, care, and quality early childhood education
                         since 2008.</p>
                 </div>
@@ -291,6 +300,11 @@
             </div>
         </div>
     </footer>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
 
     <script src="assets/js/main.js"></script>
 </body>

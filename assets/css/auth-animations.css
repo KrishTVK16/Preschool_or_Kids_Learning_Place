@@ -229,7 +229,7 @@
   background: rgba(255, 255, 255, 0.95);
   backdrop-filter: blur(10px);
   border-radius: var(--radius-lg);
-  padding: var(--spacing-xl);
+  padding: var(--spacing-xs);
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
   border: 1px solid rgba(255, 255, 255, 0.3);
   max-width: 450px;
@@ -360,7 +360,7 @@
   top: 50%;
   width: 45%;
   height: 1px;
-  background: var(--border-color);
+  background: transparent;
 }
 
 .auth-divider::before {
@@ -404,7 +404,7 @@
 /* Responsive */
 @media (max-width: 768px) {
   .auth-card {
-    padding: var(--spacing-xl);
+    padding: var(--spacing-xs);
     margin: var(--spacing-sm);
   }
   
@@ -414,6 +414,107 @@
   .floating-heart,
   .floating-balloon {
     font-size: 1.2rem;
+  }
+}
+
+/* Small screens (≤ 510px) */
+@media (max-width: 510px) {
+  .auth-content-wrapper {
+    padding: var(--spacing-sm);
+  }
+
+  .auth-content-wrapper .container {
+    max-width: 100% !important;
+    padding: 0;
+  }
+
+  .auth-card {
+    padding: var(--spacing-sm);
+    margin: var(--spacing-xs);
+    border-radius: var(--radius-md);
+  }
+
+  .auth-card h2 {
+    font-size: 1.25rem;
+    margin-bottom: var(--spacing-xs);
+  }
+
+  .auth-card .logo {
+    margin-bottom: var(--spacing-xs);
+  }
+
+  .auth-card .logo-img {
+    width: 32px;
+    height: 32px;
+  }
+
+  .auth-card .logo-title {
+    font-size: 1.1rem;
+  }
+
+  .auth-card .logo-subtitle {
+    font-size: 0.85rem;
+  }
+
+  .auth-form-input {
+    padding: 10px 14px;
+    font-size: 0.95rem;
+  }
+
+  .auth-btn {
+    padding: 12px 20px;
+    font-size: 0.95rem;
+  }
+
+  .auth-social-buttons {
+    flex-direction: column;
+    gap: var(--spacing-xs);
+  }
+
+  .auth-social-btn {
+    width: 100%;
+    padding: 10px 16px;
+    font-size: 0.9rem;
+  }
+
+  .auth-checkbox-wrapper {
+    font-size: 0.85rem;
+  }
+
+  .auth-link {
+    font-size: 0.85rem;
+  }
+
+  .auth-divider {
+    font-size: 0.85rem;
+    margin: var(--spacing-sm) 0;
+  }
+
+  .auth-form-group {
+    margin-bottom: var(--spacing-xs);
+  }
+
+  .auth-form-group[style*="justify-content: space-between"] {
+    flex-direction: column;
+    align-items: center;
+    gap: var(--spacing-xs);
+    text-align: center;
+  }
+
+  .auth-form-group[style*="justify-content: space-between"] .auth-link {
+    align-self: center;
+  }
+
+  .auth-form-group[style*="justify-content: space-between"] .auth-checkbox-wrapper {
+    justify-content: center;
+  }
+
+  .floating-star,
+  .floating-rainbow,
+  .floating-cloud,
+  .floating-sun,
+  .floating-moon {
+    font-size: 1rem;
   }
 }
 

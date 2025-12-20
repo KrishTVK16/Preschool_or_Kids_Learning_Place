@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admin Dashboard - Bright Beginnings Preschool</title>
+    <title>Bright Beginnings Preschool - Admin Dashboard</title>
     <link rel="icon" type="image/jpeg" href="assets/images/logo.jpg">
     <link rel="shortcut icon" type="image/jpeg" href="assets/images/logo.jpg">
     <link rel="apple-touch-icon" href="assets/images/logo.jpg">
@@ -19,7 +19,10 @@
         <div class="container header-container">
             <a href="index.html" class="logo">
                 <img src="assets/images/logo.jpg" alt="Bright Beginnings Logo" class="logo-img">
-                <span>Bright Beginnings</span>
+                <div class="logo-text">
+                    <span class="logo-title">Bright</span>
+                    <span class="logo-subtitle">Beginnings</span>
+                </div>
             </a>
             <nav>
                 <ul class="nav-menu">
@@ -111,18 +114,18 @@
         </div>
     </section>
     <section class="container" style="margin-bottom: var(--spacing-3xl);">
-        <div class="stats-grid">
-            <div class="card">
-                <h3 class="mb-md">Quick Actions</h3>
-                <div style="display: flex; flex-direction: column; gap: var(--spacing-sm);">
-                    <a href="#" class="btn btn-primary">Add New Student</a>
-                    <a href="#" class="btn btn-secondary">Manage Teachers</a>
-                    <a href="#" class="btn btn-mint">View Reports</a>
-                    <a href="#" class="btn btn-lavender">Settings</a>
+        <div style="display: flex; gap: var(--spacing-xl); align-items: flex-start;">
+            <div class="card" style="flex: 0 0 auto; min-width: 250px;">
+                <h3 class="mb-md text-center">Quick Actions</h3>
+                <div style="display: flex; flex-direction: column; gap: var(--spacing-sm); align-items: center;">
+                    <a href="#" class="btn btn-primary" style="width: 100%; text-align: center;">Add New Student</a>
+                    <a href="#" class="btn btn-secondary" style="width: 100%; text-align: center;">Manage Teachers</a>
+                    <a href="#" class="btn btn-mint" style="width: 100%; text-align: center;">View Reports</a>
+                    <a href="#" class="btn btn-lavender" style="width: 100%; text-align: center;">Settings</a>
                 </div>
             </div>
-            <div class="card">
-                <h3 class="mb-md">Upcoming Events</h3>
+            <div class="card" style="flex: 1;">
+                <h3 class="mb-md text-center">Upcoming Events</h3>
                 <div class="schedule-item">
                     <span class="schedule-time">Jan 20</span>
                     <span class="schedule-activity">Parent-Teacher Conference</span>
@@ -143,7 +146,13 @@
         <div class="container">
             <div class="footer-content-grid">
                 <div class="footer-logo-wrapper">
-                    <div class="footer-logo-text">Bright Beginnings</div>
+                    <div class="logo" style="display: flex; align-items: center; gap: var(--spacing-xs); margin-bottom: var(--spacing-sm);">
+                        <img src="assets/images/logo.jpg" alt="Bright Beginnings Logo" class="logo-img">
+                        <div class="logo-text">
+                            <span class="logo-title">Bright</span>
+                            <span class="logo-subtitle">Beginnings</span>
+                        </div>
+                    </div>
                     <p class="footer-text">Nurturing young minds with love, care, and quality early childhood education
                         since 2008.</p>
                 </div>
@@ -182,6 +191,12 @@
             </div>
         </div>
     </footer>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
     <script src="assets/js/main.js"></script>
 </body>
 </html>
