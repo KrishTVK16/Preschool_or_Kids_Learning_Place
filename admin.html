@@ -30,7 +30,10 @@
             </nav>
             <div class="header-actions">
                 <button class="theme-toggle" aria-label="Toggle dark mode"><i class="fas fa-moon"></i></button>
-                <a href="index.html" class="btn btn-outline btn-sm">Logout</a>
+                <a href="index.html" class="btn btn-outline btn-sm logout-btn">
+                    <i class="fas fa-sign-out-alt"></i>
+                    <span class="logout-text">Logout</span>
+                </a>
             </div>
         </div>
     </header>
@@ -114,8 +117,8 @@
         </div>
     </section>
     <section class="container" style="margin-bottom: var(--spacing-3xl);">
-        <div style="display: flex; gap: var(--spacing-xl); align-items: flex-start;">
-            <div class="card" style="flex: 0 0 auto; min-width: 250px;">
+        <div class="dashboard-actions-container" style="display: flex; gap: var(--spacing-xl); align-items: flex-start;">
+            <div class="card quick-actions-card" style="flex: 0 0 auto; min-width: 250px;">
                 <h3 class="mb-md text-center">Quick Actions</h3>
                 <div style="display: flex; flex-direction: column; gap: var(--spacing-sm); align-items: center;">
                     <a href="#" class="btn btn-primary" style="width: 100%; text-align: center;">Add New Student</a>
@@ -124,7 +127,7 @@
                     <a href="#" class="btn btn-lavender" style="width: 100%; text-align: center;">Settings</a>
                 </div>
             </div>
-            <div class="card" style="flex: 1;">
+            <div class="card upcoming-events-card" style="flex: 1;">
                 <h3 class="mb-md text-center">Upcoming Events</h3>
                 <div class="schedule-item">
                     <span class="schedule-time">Jan 20</span>

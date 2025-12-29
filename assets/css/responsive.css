@@ -533,5 +533,80 @@
 }
 
 /* ============================================
+   QUICK ACTIONS & UPCOMING EVENTS RESPONSIVE
+   ============================================ */
+
+/* Stack Quick Actions and Upcoming Events vertically on mobile */
+@media (max-width: 780px) {
+  .dashboard-actions-container {
+    flex-direction: column !important;
+    gap: var(--spacing-lg) !important;
+  }
+  
+  .quick-actions-card {
+    min-width: 100% !important;
+    width: 100% !important;
+    flex: 1 1 auto !important;
+    max-width: 100% !important;
+    box-sizing: border-box;
+  }
+  
+  .upcoming-events-card {
+    flex: 1 1 auto !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box;
+  }
+}
+
+/* Ensure cards don't overflow on very small screens */
+@media (max-width: 480px) {
+  .card {
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+}
+
+/* ============================================
+   LOGOUT BUTTON RESPONSIVE (250px - 350px)
+   ============================================ */
+
+/* Base logout button styles */
+.logout-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+  white-space: nowrap;
+}
+
+.logout-text {
+  display: inline;
+}
+
+/* Show only icon from 250px to 350px */
+@media (min-width: 250px) and (max-width: 350px) {
+  .logout-btn .logout-text {
+    display: none;
+  }
+  
+  .logout-btn {
+    padding: 10px;
+    min-width: 40px;
+    justify-content: center;
+  }
+  
+  .logout-btn i {
+    margin: 0;
+  }
+}
+
+/* Show icon + text after 350px */
+@media (min-width: 351px) {
+  .logout-btn .logout-text {
+    display: inline;
+  }
+}
+
+/* ============================================
    END OF RESPONSIVE STYLES
    ============================================ */
