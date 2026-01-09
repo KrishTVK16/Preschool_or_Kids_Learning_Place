@@ -8,28 +8,40 @@
    ============================================ */
 
 :root {
-  /* Brand Colors */
-  --sky-blue: #4DA6FF;
-  --sunshine-yellow: #FFD93D;
-  --mint-green: #6EE7B7;
-  --lavender-purple: #C4B5FD;
+  /* Brand Colors - Strict Hierarchy */
+  --primary: #7C3AED;
+  /* Violet-600: Main Action Color */
+  --primary-hover: #6D28D9;
+  --secondary: #FBBF24;
+  /* Amber-400: Fun/Highlight */
+  --secondary-hover: #F59E0B;
+
+  /* Accents - Use Sparingly */
+  --accent-sky: #38BDF8;
+  /* Sky-400 */
+  --accent-mint: #34D399;
+  /* Emerald-400 */
+  --accent-rose: #FB7185;
+  /* Rose-400 */
 
   /* Neutral Colors */
   --white: #FFFFFF;
-  --light-gray: #F9FAFB;
+  --off-white: #FAF9F6;
+  --gray-50: #F9FAFB;
   --gray-100: #F3F4F6;
   --gray-200: #E5E7EB;
   --gray-300: #D1D5DB;
   --gray-600: #4B5563;
   --gray-800: #1F2937;
-  --text-dark: #2D3748;
+  --text-dark: #1F2937;
+  --text-light: #6B7280;
 
   /* Dark Mode Colors */
-  --bg-dark: #1a1a1a;
-  --bg-dark-secondary: #2d2d2d;
-  --text-light: #e5e5e5;
-  --text-light-secondary: #b0b0b0;
-  --border-dark: #404040;
+  --bg-dark: #121212;
+  --bg-dark-secondary: #1E1E1E;
+  --text-dark-primary: #F3F4F6;
+  --text-dark-secondary: #9CA3AF;
+  --border-dark: #374151;
 
   /* Typography */
   --font-heading: 'Poppins', sans-serif;
@@ -37,72 +49,71 @@
 
   /* Spacing Scale */
   --spacing-xs: 0.5rem;
-  /* 8px */
   --spacing-sm: 1rem;
-  /* 16px */
   --spacing-md: 1.5rem;
-  /* 24px */
   --spacing-lg: 2rem;
-  /* 32px */
   --spacing-xl: 3rem;
-  /* 48px */
   --spacing-2xl: 4rem;
-  /* 64px */
   --spacing-3xl: 6rem;
-  /* 96px */
-  --spacing-4xl: 8rem;
-  /* 128px */
 
   /* Border Radius */
   --radius-sm: 12px;
-  --radius-md: 20px;
-  --radius-lg: 30px;
-  --radius-full: 999px;
+  --radius-md: 24px;
+  --radius-lg: 32px;
+  --radius-xl: 48px;
+  --radius-full: 9999px;
+  /* Pill Shape */
 
-  /* Shadows */
-  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.05);
-  --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.08);
-  --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.08);
-  --shadow-xl: 0 12px 32px rgba(0, 0, 0, 0.1);
+  /* Shadows - Colored & Glowy */
+  --shadow-sm: 0 2px 4px rgba(124, 58, 237, 0.05);
+  /* Violet-tinted shadow */
+  --shadow-md: 0 8px 16px -4px rgba(124, 58, 237, 0.1);
+  --shadow-lg: 0 12px 24px -6px rgba(124, 58, 237, 0.15);
+  --shadow-float: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  --shadow-glow: 0 0 15px rgba(124, 58, 237, 0.3);
 
   /* Gradients */
-  --gradient-calm: linear-gradient(180deg, #FFF7ED 0%, #E0F2FE 50%, #F0FDF4 100%);
-  --gradient-sky: linear-gradient(135deg, #E0F2FE 0%, #DBEAFE 100%);
-  --gradient-sunshine: linear-gradient(135deg, #FEF3C7 0%, #FDE68A 100%);
-  --gradient-mint: linear-gradient(135deg, #D1FAE5 0%, #A7F3D0 100%);
-  --gradient-lavender: linear-gradient(135deg, #EDE9FE 0%, #DDD6FE 100%);
+  --gradient-primary: linear-gradient(135deg, #7C3AED 0%, #8B5CF6 100%);
+  --gradient-sunshine: linear-gradient(135deg, #FBBF24 0%, #F59E0B 100%);
+  --gradient-sky: linear-gradient(135deg, #38BDF8 0%, #0EA5E9 100%);
+  --gradient-bg: linear-gradient(180deg, #FAF9F6 0%, #F3E8FF 100%);
+
+  /* Glassmorphism */
+  --glass-bg: rgba(255, 255, 255, 0.7);
+  --glass-border: rgba(255, 255, 255, 0.5);
+  --glass-blur: blur(12px);
 
   /* Transitions */
-  --transition-fast: all 0.2s ease;
-  --transition-base: all 0.3s ease;
-  --transition-slow: all 0.5s ease;
-  --transition-bounce: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-fast: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-bounce: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+  /* Bouncy! */
 
   /* Z-Index Scale */
   --z-dropdown: 1000;
   --z-sticky: 1001;
   --z-modal: 10000;
-  --z-tooltip: 10001;
 
   /* Container */
   --container-max-width: 1200px;
   --container-padding: 1.5rem;
 }
 
-/* Dark Mode Variables */
+/* Theme Application */
 [data-theme="dark"] {
   --bg-primary: var(--bg-dark);
   --bg-secondary: var(--bg-dark-secondary);
-  --text-primary: var(--text-light);
-  --text-secondary: var(--text-light-secondary);
+  --text-primary: var(--text-dark-primary);
+  --text-secondary: var(--text-dark-secondary);
   --border-color: var(--border-dark);
+  --glass-bg: rgba(30, 30, 30, 0.7);
+  --glass-border: rgba(255, 255, 255, 0.1);
 }
 
 [data-theme="light"] {
-  --bg-primary: var(--white);
-  --bg-secondary: var(--light-gray);
+  --bg-primary: var(--off-white);
+  --bg-secondary: var(--white);
   --text-primary: var(--text-dark);
-  --text-secondary: var(--gray-600);
+  --text-secondary: var(--text-light);
   --border-color: var(--gray-200);
 }
 
@@ -141,18 +152,21 @@ h4,
 h5,
 h6 {
   font-family: var(--font-heading);
-  font-weight: 700;
-  line-height: 1.2;
+  font-weight: 800;
+  /* Bolder! */
+  line-height: 1.1;
   color: var(--text-primary);
   margin-bottom: var(--spacing-md);
+  letter-spacing: -0.02em;
 }
 
 h1 {
-  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-size: clamp(3rem, 6vw, 5rem);
+  text-shadow: 2px 2px 0px rgba(124, 58, 237, 0.1);
 }
 
 h2 {
-  font-size: clamp(2rem, 4vw, 3rem);
+  font-size: clamp(2.25rem, 5vw, 3.5rem);
 }
 
 h3 {
@@ -590,83 +604,92 @@ ol {
    5. BUTTON COMPONENTS
    ============================================ */
 
+/* ============================================
+   5. COMPONENT: BUTTONS (PILL SHAPE & BOUNCY)
+   ============================================ */
+
 .btn {
-  display: inline-block;
-  padding: 12px 24px;
-  border-radius: var(--radius-sm);
-  font-family: var(--font-body);
-  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 32px;
+  border-radius: var(--radius-full);
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 1rem;
+  letter-spacing: 0.02em;
   text-align: center;
   cursor: pointer;
   border: none;
-  transition: var(--transition-base);
+  transition: var(--transition-bounce);
   text-decoration: none;
-  min-height: 44px;
-  line-height: 1.5;
+  line-height: 1.2;
+  gap: 8px;
+  position: relative;
+  overflow: hidden;
+  transform: translateY(0);
 }
 
+.btn:active {
+  transform: scale(0.95);
+}
+
+/* Primary Action - Violet */
 .btn-primary {
-  background: var(--sky-blue);
+  background: var(--gradient-primary);
   color: var(--white);
+  box-shadow: var(--shadow-md), var(--shadow-glow);
 }
 
 .btn-primary:hover {
-  background: #3d8fdd;
-  transform: translateY(-2px);
-  box-shadow: var(--shadow-md);
+  transform: translateY(-4px) scale(1.02);
+  box-shadow: var(--shadow-lg), var(--shadow-glow);
 }
 
+/* Secondary Action - Sunshine Yellow */
 .btn-secondary {
-  background: var(--sunshine-yellow);
+  background: var(--gradient-sunshine);
   color: var(--text-dark);
+  box-shadow: var(--shadow-sm);
 }
 
 .btn-secondary:hover {
-  background: #ffd020;
-  transform: translateY(-2px);
+  transform: translateY(-4px) scale(1.02);
   box-shadow: var(--shadow-md);
 }
 
+/* Outline/Ghost Button */
 .btn-outline {
   background: transparent;
-  color: var(--sky-blue);
-  border: 2px solid var(--sky-blue);
+  color: var(--primary);
+  border: 2px solid var(--primary);
+  box-shadow: none;
 }
 
 .btn-outline:hover {
-  background: var(--sky-blue);
+  background: var(--primary);
+  color: var(--white);
+  transform: translateY(-2px);
+}
+
+/* Accent Buttons (Use Sparingly) */
+.btn-sky {
+  background: var(--gradient-sky);
   color: var(--white);
 }
 
-.btn-mint {
-  background: var(--mint-green);
-  color: var(--text-dark);
-}
-
-.btn-mint:hover {
-  background: #5dd4a0;
-  transform: translateY(-2px);
-  box-shadow: var(--shadow-md);
-}
-
-.btn-lavender {
-  background: var(--lavender-purple);
-  color: var(--text-dark);
-}
-
-.btn-lavender:hover {
-  background: #b19efc;
-  transform: translateY(-2px);
-  box-shadow: var(--shadow-md);
+.btn-sky:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(56, 189, 248, 0.4);
 }
 
 .btn-lg {
-  padding: 16px 32px;
-  font-size: 1.125rem;
+  padding: 18px 40px;
+  font-size: 1.25rem;
 }
 
 .btn-sm {
-  padding: 8px 16px;
+  padding: 10px 20px;
   font-size: 0.875rem;
 }
 
@@ -674,20 +697,41 @@ ol {
    6. CARD COMPONENTS
    ============================================ */
 
+/* ============================================
+   6. COMPONENT: CARDS (GLASS & FLOAT)
+   ============================================ */
+
 .card {
-  background: var(--bg-primary);
-  border-radius: var(--radius-md);
+  background: var(--bg-secondary);
+  border-radius: var(--radius-lg);
+  /* Rounded corners */
   padding: var(--spacing-lg);
-  box-shadow: var(--shadow-md);
-  transition: var(--transition-base);
+  box-shadow: var(--shadow-sm);
+  /* Soft shadow */
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  /* Subtle border */
+  transition: var(--transition-bounce);
   display: flex;
   flex-direction: column;
   height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Glassmorphism Variant */
+.card-glass {
+  background: var(--glass-bg);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border: 1px solid var(--glass-border);
 }
 
 .card:hover {
-  transform: translateY(-4px);
-  box-shadow: var(--shadow-xl);
+  transform: translateY(-10px);
+  /* Deep float */
+  box-shadow: var(--shadow-float);
+  border-color: var(--primary);
+  /* Highlight on hover */
 }
 
 .card-title {
@@ -1419,7 +1463,7 @@ ol {
   .cta-heading-responsive {
     color: var(--gray-800);
   }
-  
+
   .cta-text-responsive {
     color: var(--sky-blue);
   }
@@ -1429,18 +1473,18 @@ ol {
   .cta-heading-responsive {
     color: var(--text-dark);
   }
-  
+
   .cta-text-responsive {
     color: var(--sky-blue);
   }
-  
+
   .why-choose-section {
     width: 96%;
     margin-left: 2%;
     margin-right: 2%;
     max-width: 96%;
   }
-  
+
   .why-choose-container {
     padding-left: var(--container-padding);
     padding-right: var(--container-padding);
@@ -1451,11 +1495,11 @@ ol {
   .cta-heading-responsive {
     color: var(--gray-800);
   }
-  
+
   .cta-text-responsive {
     color: var(--sky-blue);
   }
-  
+
   .cta-section-box {
     padding: var(--spacing-lg) !important;
   }
@@ -1477,7 +1521,7 @@ ol {
     color: var(--white);
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
   }
-  
+
   [data-theme="dark"] .cta-text-responsive {
     color: var(--sky-blue);
     text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
@@ -1489,7 +1533,7 @@ ol {
     color: var(--white);
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
   }
-  
+
   [data-theme="dark"] .cta-text-responsive {
     color: var(--sky-blue);
     text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
@@ -1501,7 +1545,7 @@ ol {
     color: var(--white);
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
   }
-  
+
   [data-theme="dark"] .cta-text-responsive {
     color: var(--sky-blue);
     text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
@@ -1557,7 +1601,7 @@ ol {
   margin-bottom: var(--spacing-lg);
 }
 
-.footer-content-grid > div {
+.footer-content-grid>div {
   min-width: 0;
   overflow-wrap: break-word;
   word-wrap: break-word;
@@ -2281,3 +2325,39 @@ body.mobile-menu-open .header-actions a[href="register.html"] {
 /* ============================================
    END OF STYLES
    ============================================ */
+/* Added for Activities Page Badges */
+.activity-badge {
+    background: rgba(124, 58, 237, 0.1);
+    border: 1px solid var(--primary);
+    border-radius: var(--radius-full);
+    padding: 0.25rem 0.75rem;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--primary);
+    backdrop-filter: blur(4px);
+}
+
+[data-theme='dark'] .activity-badge {
+    background: rgba(255, 255, 255, 0.1);
+    color: var(--text-dark-primary);
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+/* BOOSTER: Schedule Card Hover Effects */
+.schedule-day-card {
+    transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+    border: 1px solid transparent;
+    background: var(--bg-primary);
+    border-radius: var(--radius-md);
+    padding: var(--spacing-md);
+    box-shadow: var(--shadow-sm);
+}
+
+.schedule-day-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-float);
+    border-color: var(--primary);
+    background: var(--white);
+}

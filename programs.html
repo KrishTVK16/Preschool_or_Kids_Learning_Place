@@ -5,9 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bright Beginnings Preschool - Programs</title>
-    <link rel="icon" type="image/jpeg" href="assets/images/logo.jpg">
-    <link rel="shortcut icon" type="image/jpeg" href="assets/images/logo.jpg">
-    <link rel="apple-touch-icon" href="assets/images/logo.jpg">
+    <link rel="icon" type="image/jpeg" href="assets/images/logo_icon.png">
+    <link rel="shortcut icon" type="image/jpeg" href="assets/images/logo_icon.png">
+    <link rel="apple-touch-icon" href="assets/images/logo_icon.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -22,10 +22,10 @@
     <header class="header">
         <div class="container header-container">
             <a href="index.html" class="logo">
-                <img src="assets/images/logo.jpg" alt="Bright Beginnings Logo" class="logo-img">
+                <img src="assets/images/logo_icon.png" alt="Bright Beginnings Logo" class="logo-img">
                 <div class="logo-text">
-                    <span class="logo-title">Bright</span>
-                    <span class="logo-subtitle">Beginnings</span>
+                    <span class="logo-title" style="color: var(--primary);">Bright</span>
+                    <span class="logo-subtitle" style="color: var(--secondary);">Beginnings</span>
                 </div>
             </a>
             <nav>
@@ -91,8 +91,11 @@
     </section>
     <section class="container" style="margin-top: var(--spacing-3xl);">
         <div class="stats-grid">
-            <div class="card fade-in">
-                <div class="card-icon sky">👶</div>
+            <div class="card card-glass fade-in">
+                <div class="card-icon" style="background: transparent; width: 80px; height: 80px; margin-bottom: 24px;">
+                    <img src="assets/images/icon_toddler_rattle.png" alt="Toddler Icon"
+                        style="width: 100%; height: 100%; object-fit: contain; filter: drop-shadow(var(--shadow-md));">
+                </div>
                 <h3 class="card-title">Toddler Program</h3>
                 <p class="card-text"><strong>Ages:</strong> 18 months - 2.5 years</p>
                 <p class="card-text">Our toddler program focuses on sensory exploration, motor skill development, and
@@ -109,8 +112,11 @@
                 </ul>
                 <a href="admissions.html" class="btn btn-primary">Enroll Now</a>
             </div>
-            <div class="card fade-in">
-                <div class="card-icon yellow">🎨</div>
+            <div class="card card-glass fade-in">
+                <div class="card-icon" style="background: transparent; width: 80px; height: 80px; margin-bottom: 24px;">
+                    <img src="assets/images/icon_art_palette.png" alt="Preschool Icon"
+                        style="width: 100%; height: 100%; object-fit: contain; filter: drop-shadow(var(--shadow-md));">
+                </div>
                 <h3 class="card-title">Preschool Program</h3>
                 <p class="card-text"><strong>Ages:</strong> 2.5 - 4 years</p>
                 <p class="card-text">Creative learning through play, arts, and structured activities that prepare
@@ -125,10 +131,13 @@
                     <li>Social skills development</li>
                     <li>Outdoor play and exploration</li>
                 </ul>
-                <a href="admissions.html" class="btn btn-secondary">Enroll Now</a>
+                <a href="admissions.html" class="btn btn-primary">Enroll Now</a>
             </div>
-            <div class="card fade-in">
-                <div class="card-icon mint">📚</div>
+            <div class="card card-glass fade-in">
+                <div class="card-icon" style="background: transparent; width: 80px; height: 80px; margin-bottom: 24px;">
+                    <img src="assets/images/icon_book_abc.png" alt="Pre-K Icon"
+                        style="width: 100%; height: 100%; object-fit: contain; filter: drop-shadow(var(--shadow-md));">
+                </div>
                 <h3 class="card-title">Pre-K Program</h3>
                 <p class="card-text"><strong>Ages:</strong> 4 - 5 years</p>
                 <p class="card-text">School readiness program focusing on literacy, math, science, and social skills to
@@ -143,10 +152,13 @@
                     <li>Problem-solving skills</li>
                     <li>Kindergarten preparation</li>
                 </ul>
-                <a href="admissions.html" class="btn btn-mint">Enroll Now</a>
+                <a href="admissions.html" class="btn btn-primary">Enroll Now</a>
             </div>
-            <div class="card fade-in">
-                <div class="card-icon lavender">🌿</div>
+            <div class="card card-glass fade-in">
+                <div class="card-icon" style="background: transparent; width: 80px; height: 80px; margin-bottom: 24px;">
+                    <img src="assets/images/icon_shapes_blocks.png" alt="After School Icon"
+                        style="width: 100%; height: 100%; object-fit: contain; filter: drop-shadow(var(--shadow-md));">
+                </div>
                 <h3 class="card-title">After School Care</h3>
                 <p class="card-text"><strong>Ages:</strong> 5 - 12 years</p>
                 <p class="card-text">Extended care with homework help, enrichment activities, and supervised play for
@@ -161,7 +173,7 @@
                     <li>Supervised outdoor play</li>
                     <li>Social time with peers</li>
                 </ul>
-                <a href="admissions.html" class="btn btn-lavender">Enroll Now</a>
+                <a href="admissions.html" class="btn btn-primary">Enroll Now</a>
             </div>
         </div>
     </section>
@@ -171,39 +183,48 @@
             <div style="max-width: 600px; margin: 0 auto;">
                 <div class="schedule-item">
                     <span class="schedule-time">8:30 - 9:00</span>
-                    <span class="schedule-activity">🌅 Arrival & Free Play</span>
+                    <span class="schedule-activity"><i class="fas fa-sun text-warning" style="margin-right: 8px;"></i>
+                        Arrival & Free Play</span>
                 </div>
                 <div class="schedule-item">
                     <span class="schedule-time">9:00 - 9:30</span>
-                    <span class="schedule-activity">🍎 Morning Snack</span>
+                    <span class="schedule-activity"><i class="fas fa-apple-alt text-danger"
+                            style="margin-right: 8px;"></i> Morning Snack</span>
                 </div>
                 <div class="schedule-item">
                     <span class="schedule-time">9:30 - 10:30</span>
-                    <span class="schedule-activity">🎨 Learning Activities</span>
+                    <span class="schedule-activity"><i class="fas fa-palette text-secondary"
+                            style="margin-right: 8px;"></i> Learning Activities</span>
                 </div>
                 <div class="schedule-item">
                     <span class="schedule-time">10:30 - 11:30</span>
-                    <span class="schedule-activity">🌳 Outdoor Play</span>
+                    <span class="schedule-activity"><i class="fas fa-tree text-success" style="margin-right: 8px;"></i>
+                        Outdoor Play</span>
                 </div>
                 <div class="schedule-item">
                     <span class="schedule-time">11:30 - 12:00</span>
-                    <span class="schedule-activity">📚 Story Time</span>
+                    <span class="schedule-activity"><i class="fas fa-book-open text-primary"
+                            style="margin-right: 8px;"></i> Story Time</span>
                 </div>
                 <div class="schedule-item">
                     <span class="schedule-time">12:00 - 1:00</span>
-                    <span class="schedule-activity">🍽️ Lunch</span>
+                    <span class="schedule-activity"><i class="fas fa-utensils text-info" style="margin-right: 8px;"></i>
+                        Lunch</span>
                 </div>
                 <div class="schedule-item">
                     <span class="schedule-time">1:00 - 3:00</span>
-                    <span class="schedule-activity">😴 Rest Time</span>
+                    <span class="schedule-activity"><i class="fas fa-moon text-primary" style="margin-right: 8px;"></i>
+                        Rest Time</span>
                 </div>
                 <div class="schedule-item">
                     <span class="schedule-time">3:00 - 4:00</span>
-                    <span class="schedule-activity">🎵 Afternoon Activities</span>
+                    <span class="schedule-activity"><i class="fas fa-music text-purple" style="margin-right: 8px;"></i>
+                        Afternoon Activities</span>
                 </div>
                 <div class="schedule-item">
                     <span class="schedule-time">4:00 - 5:00</span>
-                    <span class="schedule-activity">👋 Pickup & Departure</span>
+                    <span class="schedule-activity"><i class="fas fa-hand-sparkles text-warning"
+                            style="margin-right: 8px;"></i> Pickup & Departure</span>
                 </div>
             </div>
         </div>
@@ -213,11 +234,12 @@
         <div class="container">
             <div class="footer-content-grid">
                 <div class="footer-logo-wrapper">
-                    <div class="logo" style="display: flex; align-items: center; gap: var(--spacing-xs); margin-bottom: var(--spacing-sm);">
-                        <img src="assets/images/logo.jpg" alt="Bright Beginnings Logo" class="logo-img">
+                    <div class="logo"
+                        style="display: flex; align-items: center; gap: var(--spacing-xs); margin-bottom: var(--spacing-sm);">
+                        <img src="assets/images/logo_icon.png" alt="Bright Beginnings Logo" class="logo-img">
                         <div class="logo-text">
-                            <span class="logo-title">Bright</span>
-                            <span class="logo-subtitle">Beginnings</span>
+                            <span class="logo-title" style="color: var(--primary);">Bright</span>
+                            <span class="logo-subtitle" style="color: var(--secondary);">Beginnings</span>
                         </div>
                     </div>
                     <p class="footer-text">Nurturing young minds with love, care, and quality early childhood education
@@ -243,9 +265,9 @@
                 </div>
                 <div>
                     <h4>Contact Info</h4>
-                    <p class="footer-contact-text">📍 123 Education Street<br>Learning City, LC 12345</p>
-                    <p class="footer-contact-text">📞 (555) 123-4567</p>
-                    <p class="footer-contact-text">✉️ info@brightbeginnings.com</p>
+                    <p class="footer-contact-text"><i class="fas fa-map-marker-alt" style="margin-right: 8px;"></i> 123 Education Street<br>Learning City, LC 12345</p>
+                    <p class="footer-contact-text"><i class="fas fa-phone-alt" style="margin-right: 8px;"></i> (555) 123-4567</p>
+                    <p class="footer-contact-text"><i class="fas fa-envelope" style="margin-right: 8px;"></i> info@brightbeginnings.com</p>
                     <div style="display: flex; gap: var(--spacing-sm); margin-top: var(--spacing-md);">
                         <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
                         <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>

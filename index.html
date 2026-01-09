@@ -7,9 +7,9 @@
     <meta name="description"
         content="Bright Beginnings Preschool - Nurturing young minds with love, care, and quality early childhood education">
     <title>Bright Beginnings Preschool - Home</title>
-    <link rel="icon" type="image/jpeg" href="assets/images/logo.jpg">
-    <link rel="shortcut icon" type="image/jpeg" href="assets/images/logo.jpg">
-    <link rel="apple-touch-icon" href="assets/images/logo.jpg">
+    <link rel="icon" type="image/jpeg" href="assets/images/logo_icon.png">
+    <link rel="shortcut icon" type="image/jpeg" href="assets/images/logo_icon.png">
+    <link rel="apple-touch-icon" href="assets/images/logo_icon.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -25,10 +25,10 @@
     <header class="header">
         <div class="container header-container">
             <a href="index.html" class="logo">
-                <img src="assets/images/logo.jpg" alt="Bright Beginnings Logo" class="logo-img">
+                <img src="assets/images/logo_icon.png" alt="Bright Beginnings Logo" class="logo-img">
                 <div class="logo-text">
-                    <span class="logo-title">Bright</span>
-                    <span class="logo-subtitle">Beginnings</span>
+                    <span class="logo-title" style="color: var(--primary);">Bright</span>
+                    <span class="logo-subtitle" style="color: var(--secondary);">Beginnings</span>
                 </div>
             </a>
             <nav>
@@ -94,22 +94,31 @@
     </div>
 
     <!-- Hero Section -->
-    <section class="hero hero-gradient-wave">
+    <!-- Hero Section -->
+    <section class="hero hero-gradient-wave"
+        style="padding-top: var(--spacing-4xl); padding-bottom: var(--spacing-4xl); background: var(--gradient-bg);">
         <div class="container">
-            <div class="hero-content fade-in">
-                <h1 style="color: white; text-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);">Welcome to Bright Beginnings
-                    Preschool</h1>
-                <p class="text-lg leading-relaxed" style="color: white; text-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);">
-                    Nurturing young minds with love, care, and quality early childhood education. Where every child's
-                    journey begins with bright possibilities.</p>
-                <div class="hero-cta-group">
-                    <a href="admissions.html" class="btn btn-white btn-lg">Enroll Now</a>
-                    <a href="about.html" class="btn btn-white-outline btn-lg">Learn More</a>
+            <div style="display: flex; flex-direction: column; align-items: center; gap: var(--spacing-lg);">
+                <div class="hero-content fade-in" style="max-width: 800px; margin: 0 auto; text-align: center;">
+                    <h1 style="color: var(--primary); text-shadow: none; margin-bottom: 24px;">Where Bright Futures
+                        Begin!</h1>
+                    <p class="text-lg leading-relaxed"
+                        style="color: var(--text-secondary); text-shadow: none; font-size: 1.25rem; font-weight: 600;">
+                        Nurturing young minds with love, play, and creativity. Join our family today!</p>
+                    <div class="hero-cta-group" style="margin-top: 32px;">
+                        <a href="admissions.html" class="btn btn-primary btn-lg">Enroll Now <i
+                                class="fas fa-arrow-right"></i></a>
+                        <a href="about.html" class="btn btn-outline btn-lg">Virtual Tour</a>
+                    </div>
+                </div>
+                <!-- Hero Image Illustration -->
+                <div class="fade-in"
+                    style="width: 100%; max-width: 1000px; margin-top: var(--spacing-lg); border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-float);">
+                    <img src="assets/images/hero_kids_playing.png" alt="Happy Kids Playing"
+                        style="width: 100%; display: block;">
                 </div>
             </div>
         </div>
-        <div class="hero-wave-bottom-1"></div>
-        <div class="hero-wave-bottom-2"></div>
     </section>
 
     <!-- Stats Section -->
@@ -142,34 +151,48 @@
                 unique needs of every child at different stages of their early development.</p>
         </div>
         <div class="stats-grid">
-            <div class="card text-center fade-in">
-                <div class="card-icon sky">👶</div>
-                <h3 class="card-title">Toddler Program</h3>
-                <p class="card-text">Ages 18 months - 2.5 years. Focus on sensory exploration, motor skills, and early
-                    socialization.</p>
-                <a href="programs.html" class="btn btn-primary">Learn More</a>
+            <div class="stats-grid" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));">
+                <div class="card card-glass text-center fade-in">
+                    <div class="card-icon"
+                        style="background: transparent; width: 100px; height: 100px; margin: 0 auto 24px;">
+                        <img src="assets/images/icon_toddler_rattle.png" alt="Toddler Icon"
+                            style="width: 100%; height: 100%; object-fit: contain; filter: drop-shadow(0 8px 16px rgba(56, 189, 248, 0.2));">
+                    </div>
+                    <h3 class="card-title">Toddler Program</h3>
+                    <p class="card-text">Ages 18 months - 2.5 years. Sensory exploration and early socialization.</p>
+                    <a href="programs.html" class="btn btn-sm btn-outline">Explore</a>
+                </div>
+                <div class="card card-glass text-center fade-in">
+                    <div class="card-icon"
+                        style="background: transparent; width: 100px; height: 100px; margin: 0 auto 24px;">
+                        <img src="assets/images/icon_art_palette.png" alt="Art Icon"
+                            style="width: 100%; height: 100%; object-fit: contain; filter: drop-shadow(0 8px 16px rgba(251, 191, 36, 0.2));">
+                    </div>
+                    <h3 class="card-title">Preschool Program</h3>
+                    <p class="card-text">Ages 2.5 - 4 years. Creative learning through play and arts.</p>
+                    <a href="programs.html" class="btn btn-sm btn-outline">Explore</a>
+                </div>
+                <div class="card card-glass text-center fade-in">
+                    <div class="card-icon"
+                        style="background: transparent; width: 100px; height: 100px; margin: 0 auto 24px;">
+                        <img src="assets/images/icon_book_abc.png" alt="Pre-K Icon"
+                            style="width: 100%; height: 100%; object-fit: contain; filter: drop-shadow(0 8px 16px rgba(52, 211, 153, 0.2));">
+                    </div>
+                    <h3 class="card-title">Pre-K Program</h3>
+                    <p class="card-text">Ages 4 - 5 years. School readiness, literacy, and math fun.</p>
+                    <a href="programs.html" class="btn btn-sm btn-outline">Explore</a>
+                </div>
+                <div class="card card-glass text-center fade-in">
+                    <div class="card-icon"
+                        style="background: transparent; width: 100px; height: 100px; margin: 0 auto 24px;">
+                        <img src="assets/images/icon_shapes_blocks.png" alt="After School Icon"
+                            style="width: 100%; height: 100%; object-fit: contain; filter: drop-shadow(0 8px 16px rgba(124, 58, 237, 0.2));">
+                    </div>
+                    <h3 class="card-title">After School</h3>
+                    <p class="card-text">Enrichment activities, homework help, and supervised play.</p>
+                    <a href="programs.html" class="btn btn-sm btn-outline">Explore</a>
+                </div>
             </div>
-            <div class="card text-center fade-in">
-                <div class="card-icon yellow">🎨</div>
-                <h3 class="card-title">Preschool Program</h3>
-                <p class="card-text">Ages 2.5 - 4 years. Creative learning through play, arts, and structured
-                    activities.</p>
-                <a href="programs.html" class="btn btn-secondary">Learn More</a>
-            </div>
-            <div class="card text-center fade-in">
-                <div class="card-icon mint">📚</div>
-                <h3 class="card-title">Pre-K Program</h3>
-                <p class="card-text">Ages 4 - 5 years. School readiness with focus on literacy, math, and social skills.
-                </p>
-                <a href="programs.html" class="btn btn-mint">Learn More</a>
-            </div>
-            <div class="card text-center fade-in">
-                <div class="card-icon lavender">🌿</div>
-                <h3 class="card-title">After School</h3>
-                <p class="card-text">Extended care with homework help, enrichment activities, and supervised play.</p>
-                <a href="programs.html" class="btn btn-lavender">Learn More</a>
-            </div>
-        </div>
     </section>
 
     <!-- Why Choose Us Section -->
@@ -221,17 +244,17 @@
                 <p class="testimonial-text">"Bright Beginnings has been an amazing experience for our daughter. The
                     teachers are caring, the programs are engaging, and we've seen incredible growth in her confidence
                     and skills."</p>
-                <h4 class="testimonial-author">— Sarah Johnson, Parent</h4>
+                <h4 class="testimonial-author">&mdash; Sarah Johnson, Parent</h4>
             </div>
             <div class="card text-center fade-in">
                 <p class="testimonial-text">"We couldn't be happier with our choice. The staff goes above and beyond,
                     and our son looks forward to going to school every day. Highly recommend!"</p>
-                <h4 class="testimonial-author">— Michael Chen Lee, Parent</h4>
+                <h4 class="testimonial-author">&mdash; Michael Chen Lee, Parent</h4>
             </div>
             <div class="card text-center fade-in">
                 <p class="testimonial-text">"The curriculum is well-structured, the facilities are excellent, and most
                     importantly, our child is happy and thriving. Thank you, Bright Beginnings!"</p>
-                <h4 class="testimonial-author">— Emily Rodriguez, Parent</h4>
+                <h4 class="testimonial-author">&mdash; Emily Rodriguez, Parent</h4>
             </div>
         </div>
     </section>
@@ -241,7 +264,8 @@
         <div class="content-box content-box-center cta-section-box"
             style="background: var(--gradient-sky); padding: var(--spacing-2xl);">
             <h2 class="mb-md cta-heading-responsive">Ready to Begin Your Child's Journey?</h2>
-            <p class="text-lg mb-lg cta-text-responsive">Join our Bright Beginnings family and give your child the best start in their
+            <p class="text-lg mb-lg cta-text-responsive">Join our Bright Beginnings family and give your child the best
+                start in their
                 educational journey.</p>
             <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
                 <a href="admissions.html" class="btn btn-primary btn-lg">Schedule a Tour</a>
@@ -255,11 +279,12 @@
         <div class="container">
             <div class="footer-content-grid">
                 <div class="footer-logo-wrapper">
-                    <div class="logo" style="display: flex; align-items: center; gap: var(--spacing-xs); margin-bottom: var(--spacing-sm);">
-                        <img src="assets/images/logo.jpg" alt="Bright Beginnings Logo" class="logo-img">
+                    <div class="logo"
+                        style="display: flex; align-items: center; gap: var(--spacing-xs); margin-bottom: var(--spacing-sm);">
+                        <img src="assets/images/logo_icon.png" alt="Bright Beginnings Logo" class="logo-img">
                         <div class="logo-text">
-                            <span class="logo-title">Bright</span>
-                            <span class="logo-subtitle">Beginnings</span>
+                            <span class="logo-title" style="color: var(--primary);">Bright</span>
+                            <span class="logo-subtitle" style="color: var(--secondary);">Beginnings</span>
                         </div>
                     </div>
                     <p class="footer-text">Nurturing young minds with love, care, and quality early childhood education
@@ -285,9 +310,9 @@
                 </div>
                 <div>
                     <h4>Contact Info</h4>
-                    <p class="footer-contact-text">📍 123 Education Street<br>Learning City, LC 12345</p>
-                    <p class="footer-contact-text">📞 (555) 123-4567</p>
-                    <p class="footer-contact-text">✉️ info@brightbeginnings.com</p>
+                    <p class="footer-contact-text"><i class="fas fa-map-marker-alt" style="margin-right: 8px;"></i> 123 Education Street<br>Learning City, LC 12345</p>
+                    <p class="footer-contact-text"><i class="fas fa-phone-alt" style="margin-right: 8px;"></i> (555) 123-4567</p>
+                    <p class="footer-contact-text"><i class="fas fa-envelope" style="margin-right: 8px;"></i> info@brightbeginnings.com</p>
                     <div style="display: flex; gap: var(--spacing-sm); margin-top: var(--spacing-md);">
                         <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
                         <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>

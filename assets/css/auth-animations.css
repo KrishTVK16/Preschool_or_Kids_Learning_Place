@@ -17,9 +17,17 @@
 }
 
 @keyframes gradientShift {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 /* Floating Stars */
@@ -30,20 +38,70 @@
   animation: floatStar 6s ease-in-out infinite;
 }
 
-.floating-star:nth-child(1) { top: 8%; left: 8%; animation-delay: 0s; animation-duration: 5s; }
-.floating-star:nth-child(2) { top: 15%; right: 12%; animation-delay: 1s; animation-duration: 6s; }
-.floating-star:nth-child(3) { top: 25%; left: 3%; animation-delay: 2s; animation-duration: 7s; }
-.floating-star:nth-child(4) { top: 35%; right: 8%; animation-delay: 0.5s; animation-duration: 5.5s; }
-.floating-star:nth-child(5) { bottom: 45%; left: 15%; animation-delay: 1.5s; animation-duration: 6.5s; }
-.floating-star:nth-child(6) { bottom: 35%; right: 20%; animation-delay: 2.5s; animation-duration: 7.5s; }
-.floating-star:nth-child(7) { top: 50%; left: 5%; animation-delay: 3s; animation-duration: 6s; }
-.floating-star:nth-child(8) { bottom: 25%; right: 5%; animation-delay: 1s; animation-duration: 5s; }
+.floating-star:nth-child(1) {
+  top: 8%;
+  left: 8%;
+  animation-delay: 0s;
+  animation-duration: 5s;
+}
+
+.floating-star:nth-child(2) {
+  top: 15%;
+  right: 12%;
+  animation-delay: 1s;
+  animation-duration: 6s;
+}
+
+.floating-star:nth-child(3) {
+  top: 25%;
+  left: 3%;
+  animation-delay: 2s;
+  animation-duration: 7s;
+}
+
+.floating-star:nth-child(4) {
+  top: 35%;
+  right: 8%;
+  animation-delay: 0.5s;
+  animation-duration: 5.5s;
+}
+
+.floating-star:nth-child(5) {
+  bottom: 45%;
+  left: 15%;
+  animation-delay: 1.5s;
+  animation-duration: 6.5s;
+}
+
+.floating-star:nth-child(6) {
+  bottom: 35%;
+  right: 20%;
+  animation-delay: 2.5s;
+  animation-duration: 7.5s;
+}
+
+.floating-star:nth-child(7) {
+  top: 50%;
+  left: 5%;
+  animation-delay: 3s;
+  animation-duration: 6s;
+}
+
+.floating-star:nth-child(8) {
+  bottom: 25%;
+  right: 5%;
+  animation-delay: 1s;
+  animation-duration: 5s;
+}
 
 @keyframes floatStar {
-  0%, 100% {
+
+  0%,
+  100% {
     transform: translateY(0) rotate(0deg);
     opacity: 0.7;
   }
+
   50% {
     transform: translateY(-30px) rotate(180deg);
     opacity: 1;
@@ -58,18 +116,50 @@
   animation: floatTwinkle 4s ease-in-out infinite;
 }
 
-.floating-twinkle:nth-child(1) { top: 12%; left: 20%; animation-delay: 0s; }
-.floating-twinkle:nth-child(2) { top: 30%; right: 25%; animation-delay: 1s; }
-.floating-twinkle:nth-child(3) { bottom: 50%; left: 25%; animation-delay: 2s; }
-.floating-twinkle:nth-child(4) { bottom: 30%; right: 30%; animation-delay: 0.5s; }
-.floating-twinkle:nth-child(5) { top: 60%; left: 10%; animation-delay: 1.5s; }
-.floating-twinkle:nth-child(6) { bottom: 20%; left: 30%; animation-delay: 2.5s; }
+.floating-twinkle:nth-child(1) {
+  top: 12%;
+  left: 20%;
+  animation-delay: 0s;
+}
+
+.floating-twinkle:nth-child(2) {
+  top: 30%;
+  right: 25%;
+  animation-delay: 1s;
+}
+
+.floating-twinkle:nth-child(3) {
+  bottom: 50%;
+  left: 25%;
+  animation-delay: 2s;
+}
+
+.floating-twinkle:nth-child(4) {
+  bottom: 30%;
+  right: 30%;
+  animation-delay: 0.5s;
+}
+
+.floating-twinkle:nth-child(5) {
+  top: 60%;
+  left: 10%;
+  animation-delay: 1.5s;
+}
+
+.floating-twinkle:nth-child(6) {
+  bottom: 20%;
+  left: 30%;
+  animation-delay: 2.5s;
+}
 
 @keyframes floatTwinkle {
-  0%, 100% {
+
+  0%,
+  100% {
     transform: scale(1) rotate(0deg);
     opacity: 0.8;
   }
+
   50% {
     transform: scale(1.3) rotate(180deg);
     opacity: 1;
@@ -84,23 +174,42 @@
   animation: floatRainbow 8s ease-in-out infinite;
 }
 
-.floating-rainbow:nth-child(1) { top: 10%; right: 15%; animation-delay: 0s; }
-.floating-rainbow:nth-child(2) { bottom: 40%; left: 12%; animation-delay: 3s; }
-.floating-rainbow:nth-child(3) { top: 45%; right: 3%; animation-delay: 1.5s; }
+.floating-rainbow:nth-child(1) {
+  top: 10%;
+  right: 15%;
+  animation-delay: 0s;
+}
+
+.floating-rainbow:nth-child(2) {
+  bottom: 40%;
+  left: 12%;
+  animation-delay: 3s;
+}
+
+.floating-rainbow:nth-child(3) {
+  top: 45%;
+  right: 3%;
+  animation-delay: 1.5s;
+}
 
 @keyframes floatRainbow {
-  0%, 100% {
+
+  0%,
+  100% {
     transform: translateY(0) translateX(0) scale(1);
     opacity: 0.6;
   }
+
   25% {
     transform: translateY(-20px) translateX(10px) scale(1.1);
     opacity: 0.8;
   }
+
   50% {
     transform: translateY(-40px) translateX(-10px) scale(1);
     opacity: 0.7;
   }
+
   75% {
     transform: translateY(-20px) translateX(5px) scale(1.05);
     opacity: 0.8;
@@ -115,17 +224,44 @@
   animation: floatCloud 12s ease-in-out infinite;
 }
 
-.floating-cloud:nth-child(1) { top: 3%; left: 3%; animation-delay: 0s; }
-.floating-cloud:nth-child(2) { top: 8%; right: 8%; animation-delay: 4s; }
-.floating-cloud:nth-child(3) { bottom: 50%; left: 8%; animation-delay: 8s; }
-.floating-cloud:nth-child(4) { bottom: 12%; right: 12%; animation-delay: 2s; }
-.floating-cloud:nth-child(5) { top: 40%; left: 1%; animation-delay: 6s; }
+.floating-cloud:nth-child(1) {
+  top: 3%;
+  left: 3%;
+  animation-delay: 0s;
+}
+
+.floating-cloud:nth-child(2) {
+  top: 8%;
+  right: 8%;
+  animation-delay: 4s;
+}
+
+.floating-cloud:nth-child(3) {
+  bottom: 50%;
+  left: 8%;
+  animation-delay: 8s;
+}
+
+.floating-cloud:nth-child(4) {
+  bottom: 12%;
+  right: 12%;
+  animation-delay: 2s;
+}
+
+.floating-cloud:nth-child(5) {
+  top: 40%;
+  left: 1%;
+  animation-delay: 6s;
+}
 
 @keyframes floatCloud {
-  0%, 100% {
+
+  0%,
+  100% {
     transform: translateX(0) translateY(0);
     opacity: 0.5;
   }
+
   50% {
     transform: translateX(50px) translateY(-20px);
     opacity: 0.7;
@@ -140,16 +276,38 @@
   animation: floatBalloon 10s ease-in-out infinite;
 }
 
-.floating-balloon:nth-child(1) { top: 20%; right: 3%; animation-delay: 0s; }
-.floating-balloon:nth-child(2) { bottom: 40%; right: 12%; animation-delay: 5s; }
-.floating-balloon:nth-child(3) { top: 55%; left: 2%; animation-delay: 2.5s; }
-.floating-balloon:nth-child(4) { bottom: 15%; left: 18%; animation-delay: 7s; }
+.floating-balloon:nth-child(1) {
+  top: 20%;
+  right: 3%;
+  animation-delay: 0s;
+}
+
+.floating-balloon:nth-child(2) {
+  bottom: 40%;
+  right: 12%;
+  animation-delay: 5s;
+}
+
+.floating-balloon:nth-child(3) {
+  top: 55%;
+  left: 2%;
+  animation-delay: 2.5s;
+}
+
+.floating-balloon:nth-child(4) {
+  bottom: 15%;
+  left: 18%;
+  animation-delay: 7s;
+}
 
 @keyframes floatBalloon {
-  0%, 100% {
+
+  0%,
+  100% {
     transform: translateY(0) rotate(-5deg);
     opacity: 0.6;
   }
+
   50% {
     transform: translateY(-50px) rotate(5deg);
     opacity: 0.8;
@@ -164,14 +322,26 @@
   animation: floatSun 10s ease-in-out infinite;
 }
 
-.floating-sun:nth-child(1) { top: 5%; right: 25%; animation-delay: 0s; }
-.floating-sun:nth-child(2) { bottom: 60%; left: 20%; animation-delay: 5s; }
+.floating-sun:nth-child(1) {
+  top: 5%;
+  right: 25%;
+  animation-delay: 0s;
+}
+
+.floating-sun:nth-child(2) {
+  bottom: 60%;
+  left: 20%;
+  animation-delay: 5s;
+}
 
 @keyframes floatSun {
-  0%, 100% {
+
+  0%,
+  100% {
     transform: translateY(0) rotate(0deg);
     opacity: 0.7;
   }
+
   50% {
     transform: translateY(-30px) rotate(360deg);
     opacity: 0.9;
@@ -186,14 +356,26 @@
   animation: floatMoon 12s ease-in-out infinite;
 }
 
-.floating-moon:nth-child(1) { top: 18%; left: 22%; animation-delay: 0s; }
-.floating-moon:nth-child(2) { bottom: 55%; right: 18%; animation-delay: 6s; }
+.floating-moon:nth-child(1) {
+  top: 18%;
+  left: 22%;
+  animation-delay: 0s;
+}
+
+.floating-moon:nth-child(2) {
+  bottom: 55%;
+  right: 18%;
+  animation-delay: 6s;
+}
 
 @keyframes floatMoon {
-  0%, 100% {
+
+  0%,
+  100% {
     transform: translateY(0) scale(1);
     opacity: 0.6;
   }
+
   50% {
     transform: translateY(-25px) scale(1.1);
     opacity: 0.8;
@@ -208,10 +390,29 @@
   animation: floatHeart 5s ease-in-out infinite;
 }
 
-.floating-heart:nth-child(1) { top: 28%; left: 6%; animation-delay: 0s; }
-.floating-heart:nth-child(2) { bottom: 45%; right: 6%; animation-delay: 2s; }
-.floating-heart:nth-child(3) { top: 65%; left: 10%; animation-delay: 1s; }
-.floating-heart:nth-child(4) { bottom: 25%; right: 10%; animation-delay: 3s; }
+.floating-heart:nth-child(1) {
+  top: 28%;
+  left: 6%;
+  animation-delay: 0s;
+}
+
+.floating-heart:nth-child(2) {
+  bottom: 45%;
+  right: 6%;
+  animation-delay: 2s;
+}
+
+.floating-heart:nth-child(3) {
+  top: 65%;
+  left: 10%;
+  animation-delay: 1s;
+}
+
+.floating-heart:nth-child(4) {
+  bottom: 25%;
+  right: 10%;
+  animation-delay: 3s;
+}
 
 /* Content Wrapper - Above Background */
 .auth-content-wrapper {
@@ -289,30 +490,34 @@
   color: var(--gray-300);
 }
 
-/* Minimalistic Button */
+/* Minimalistic Button (Updated to Violet Design) */
 .auth-btn {
   width: 100%;
   padding: 14px 24px;
-  background: var(--sky-blue);
+  background: var(--gradient-primary);
+  /* Violet Gradient */
   color: var(--white);
   border: none;
-  border-radius: var(--radius-sm);
+  border-radius: 999px;
+  /* Pill Shape */
   font-size: 1rem;
   font-weight: 600;
   font-family: var(--font-body);
   cursor: pointer;
-  transition: var(--transition-base);
+  transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.3s ease;
+  /* Bouncy */
   margin-top: var(--spacing-sm);
-}
-
-.auth-btn:hover {
-  background: #3d8fdd;
-  transform: translateY(-2px);
   box-shadow: var(--shadow-md);
 }
 
+.auth-btn:hover {
+  background: var(--gradient-primary);
+  transform: translateY(-4px) scale(1.02);
+  box-shadow: var(--shadow-lg), var(--shadow-glow);
+}
+
 .auth-btn:active {
-  transform: translateY(0);
+  transform: translateY(-1px);
 }
 
 /* Link Styles */
@@ -407,7 +612,7 @@
     padding: var(--spacing-xs);
     margin: var(--spacing-sm);
   }
-  
+
   .floating-star,
   .floating-rainbow,
   .floating-cloud,
@@ -527,4 +732,3 @@
   background: rgba(45, 45, 45, 0.95);
   border-color: rgba(255, 255, 255, 0.1);
 }
-

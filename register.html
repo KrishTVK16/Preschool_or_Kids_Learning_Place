@@ -1,39 +1,43 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="light">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bright Beginnings Preschool - Register</title>
-    <link rel="icon" type="image/jpeg" href="assets/images/logo.jpg">
-    <link rel="shortcut icon" type="image/jpeg" href="assets/images/logo.jpg">
-    <link rel="apple-touch-icon" href="assets/images/logo.jpg">
+    <link rel="icon" type="image/jpeg" href="assets/images/logo_icon.png">
+    <link rel="shortcut icon" type="image/jpeg" href="assets/images/logo_icon.png">
+    <link rel="apple-touch-icon" href="assets/images/logo_icon.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Nunito:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Nunito:wght@300;400;600;700&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="assets/css/styles.css">
     <link rel="stylesheet" href="assets/css/responsive.css">
     <link rel="stylesheet" href="assets/css/auth-animations.css">
 </head>
+
 <body>
     <!-- Animated Background -->
     <div class="auth-background">
         <!-- Stars (5) -->
-        <div class="floating-star">⭐</div>
-        <div class="floating-star">⭐</div>
-        <div class="floating-star">⭐</div>
-        <div class="floating-star">⭐</div>
-        <div class="floating-star">⭐</div>
+        <div class="floating-star"><i class="fas fa-star text-warning"></i></div>
+        <div class="floating-star"><i class="fas fa-star text-warning"></i></div>
+        <div class="floating-star"><i class="fas fa-star text-warning"></i></div>
+        <div class="floating-star"><i class="fas fa-star text-warning"></i></div>
+        <div class="floating-star"><i class="fas fa-star text-warning"></i></div>
         <!-- Cloud Left -->
-        <div class="floating-cloud" style="left: 3%; top: 5%;">☁️</div>
+        <div class="floating-cloud" style="left: 3%; top: 5%;"><i class="fas fa-cloud text-white" style="opacity: 0.8;"></i></div>
         <!-- Cloud Right -->
-        <div class="floating-cloud" style="right: 8%; top: 8%;">☁️</div>
+        <div class="floating-cloud" style="right: 8%; top: 8%;"><i class="fas fa-cloud text-white" style="opacity: 0.8;"></i></div>
         <!-- Sun Right -->
-        <div class="floating-sun" style="right: 25%; top: 5%;">☀️</div>
+        <div class="floating-sun" style="right: 25%; top: 5%;"><i class="fas fa-sun text-warning"></i></div>
         <!-- Moon Left -->
-        <div class="floating-moon" style="left: 22%; top: 18%;">🌙</div>
+        <div class="floating-moon" style="left: 22%; top: 18%;"><i class="fas fa-moon text-warning"></i></div>
         <!-- Rainbow Right -->
-        <div class="floating-rainbow" style="right: 15%; top: 10%;">🌈</div>
+        <div class="floating-rainbow" style="right: 15%; top: 10%;"><i class="fas fa-rainbow text-primary"></i></div>
     </div>
 
     <!-- Content -->
@@ -42,10 +46,10 @@
             <div class="auth-card fade-in">
                 <div class="text-center" style="margin-bottom: var(--spacing-md);">
                     <a href="index.html" class="logo">
-                        <img src="assets/images/logo.jpg" alt="Bright Beginnings Logo" class="logo-img">
+                        <img src="assets/images/logo_icon.png" alt="Bright Beginnings Logo" class="logo-img">
                         <div class="logo-text">
-                            <span class="logo-title">Bright</span>
-                            <span class="logo-subtitle">Beginnings</span>
+                            <span class="logo-title" style="color: var(--primary);">Bright</span>
+                            <span class="logo-subtitle" style="color: var(--secondary);">Beginnings</span>
                         </div>
                     </a>
                     <h2>Create Account</h2>
@@ -64,20 +68,24 @@
                         <input type="text" id="child-name" class="auth-form-input" required placeholder="Child's Name">
                     </div>
                     <div class="auth-form-group">
-                        <input type="password" id="password" class="auth-form-input" required placeholder="Password (min 8 characters)">
+                        <input type="password" id="password" class="auth-form-input" required
+                            placeholder="Password (min 8 characters)">
                     </div>
                     <div class="auth-form-group">
-                        <input type="password" id="confirm-password" class="auth-form-input" required placeholder="Confirm Password">
+                        <input type="password" id="confirm-password" class="auth-form-input" required
+                            placeholder="Confirm Password">
                     </div>
                     <div class="auth-form-group" style="margin-bottom: var(--spacing-sm);">
                         <label class="auth-checkbox-wrapper" style="align-items: flex-start;">
                             <input type="checkbox" class="auth-checkbox" required style="margin-top: 2px;">
-                            <span style="font-size: 0.85rem;">I agree to the <a href="#" class="auth-link">T&C</a> and <a href="#" class="auth-link">Privacy</a></span>
+                            <span style="font-size: 0.85rem;">I agree to the <a href="#" class="auth-link">T&C</a> and
+                                <a href="#" class="auth-link">Privacy</a></span>
                         </label>
                     </div>
                     <button type="submit" class="auth-btn">Create Account</button>
                     <div class="text-center" style="margin-top: var(--spacing-sm);">
-                        <p class="text-gray-600" style="font-size: 0.9rem;">Already have an account? <a href="login.html" class="auth-link">Login here</a></p>
+                        <p class="text-gray-600" style="font-size: 0.9rem;">Already have an account? <a
+                                href="login.html" class="auth-link">Login here</a></p>
                     </div>
                     <div class="auth-divider">Or register with</div>
                     <div class="auth-social-buttons">
@@ -94,5 +102,5 @@
     </div>
     <script src="assets/js/main.js"></script>
 </body>
-</html>
 
+</html>
