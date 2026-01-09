@@ -45,9 +45,9 @@
     <div class="container" style="margin-top: var(--spacing-lg); margin-bottom: var(--spacing-3xl);">
 
         <!-- Welcome Widget (Mascot) -->
-        <div class="card card-glass mb-xl"
-            style="flex-direction: row; align-items: center; background: linear-gradient(120deg, var(--off-white) 0%, #F5F3FF 100%);">
-            <div style="flex: 1; padding-right: var(--spacing-lg);">
+        <div class="card card-glass mb-xl welcome-widget"
+            style="background: linear-gradient(120deg, var(--off-white) 0%, #F5F3FF 100%);">
+            <div class="welcome-content" style="flex: 1; padding-right: var(--spacing-lg);">
                 <h1 style="margin-bottom: var(--spacing-sm); color: var(--primary);">Good Morning!</h1>
                 <p class="text-lg" style="margin-bottom: var(--spacing-md);">Ready to make today bright? Here is what's
                     happening at school.</p>
@@ -64,7 +64,7 @@
                     </div>
                 </div>
             </div>
-            <div style="flex-shrink: 0; width: 250px;">
+            <div class="welcome-image" style="flex-shrink: 0; width: 250px;">
                 <img src="assets/images/mascot_owl_teacher.png" alt="Teacher Owl Mascot"
                     style="width: 100%; filter: drop-shadow(0 10px 20px rgba(0,0,0,0.1)); animation: float 6s ease-in-out infinite;">
             </div>
@@ -80,7 +80,7 @@
                     style="background: var(--gradient-primary); color: white; margin-bottom: var(--spacing-sm); width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; margin: 0 auto;">
                     <i class="fas fa-user-plus"></i>
                 </div>
-                <h4 style="margin: 1rem 0 0; color: var(--text-dark);">Add Student</h4>
+                <h4 style="margin: 1rem 0 0; color: var(--text-primary);">Add Student</h4>
             </a>
 
             <a href="#" class="card card-glass text-center btn-motion"
@@ -89,7 +89,7 @@
                     style="background: var(--gradient-sunshine); color: var(--text-dark); margin-bottom: var(--spacing-sm); width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; margin: 0 auto;">
                     <i class="fas fa-bullhorn"></i>
                 </div>
-                <h4 style="margin: 1rem 0 0; color: var(--text-dark);">Announcement</h4>
+                <h4 style="margin: 1rem 0 0; color: var(--text-primary);">Announcement</h4>
             </a>
 
             <a href="#" class="card card-glass text-center btn-motion"
@@ -98,7 +98,7 @@
                     style="background: var(--gradient-sky); color: white; margin-bottom: var(--spacing-sm); width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; margin: 0 auto;">
                     <i class="fas fa-calendar-alt"></i>
                 </div>
-                <h4 style="margin: 1rem 0 0; color: var(--text-dark);">Calendar</h4>
+                <h4 style="margin: 1rem 0 0; color: var(--text-primary);">Calendar</h4>
             </a>
 
             <a href="#" class="card card-glass text-center btn-motion"
@@ -107,7 +107,7 @@
                     style="background: linear-gradient(135deg, #34D399, #10B981); color: white; margin-bottom: var(--spacing-sm); width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; margin: 0 auto;">
                     <i class="fas fa-file-invoice-dollar"></i>
                 </div>
-                <h4 style="margin: 1rem 0 0; color: var(--text-dark);">Billing</h4>
+                <h4 style="margin: 1rem 0 0; color: var(--text-primary);">Billing</h4>
             </a>
         </div>
 
@@ -118,37 +118,37 @@
                 <table class="admin-table" style="width: 100%; border-collapse: separate; border-spacing: 0 10px;">
                     <thead>
                         <tr>
-                            <th style="padding: 1rem; text-align: left; color: var(--text-light);">Name</th>
-                            <th style="padding: 1rem; text-align: left; color: var(--text-light);">Program</th>
-                            <th style="padding: 1rem; text-align: left; color: var(--text-light);">Status</th>
-                            <th style="padding: 1rem; text-align: left; color: var(--text-light);">Action</th>
+                            <th style="padding: 1rem; text-align: left; color: var(--text-secondary);">Name</th>
+                            <th style="padding: 1rem; text-align: left; color: var(--text-secondary);">Program</th>
+                            <th style="padding: 1rem; text-align: left; color: var(--text-secondary);">Status</th>
+                            <th style="padding: 1rem; text-align: left; color: var(--text-secondary);">Action</th>
                         </tr>
                     </thead>
                     <tbody>
-                        <tr style="background: var(--white); box-shadow: var(--shadow-sm); border-radius: 8px;">
+                        <tr style="background: var(--bg-secondary); box-shadow: var(--shadow-sm); border-radius: 8px;">
                             <td style="padding: 1rem; font-weight: 600;">Emma Wilson</td>
                             <td style="padding: 1rem;"><span
-                                    style="background: var(--gray-100); padding: 4px 12px; border-radius: 12px; font-size: 0.85rem;">Preschool</span>
+                                    style="background: var(--gray-100); padding: 4px 12px; border-radius: 12px; font-size: 0.85rem; color: var(--text-dark);">Preschool</span>
                             </td>
                             <td style="padding: 1rem;"><span
                                     style="color: var(--accent-mint); font-weight: 700; background: rgba(52, 211, 153, 0.1); padding: 4px 12px; border-radius: 12px;">Approved</span>
                             </td>
                             <td style="padding: 1rem;"><button class="btn btn-sm btn-outline">View</button></td>
                         </tr>
-                        <tr style="background: var(--white); box-shadow: var(--shadow-sm); border-radius: 8px;">
+                        <tr style="background: var(--bg-secondary); box-shadow: var(--shadow-sm); border-radius: 8px;">
                             <td style="padding: 1rem; font-weight: 600;">Lucas Martinez</td>
                             <td style="padding: 1rem;"><span
-                                    style="background: var(--gray-100); padding: 4px 12px; border-radius: 12px; font-size: 0.85rem;">Pre-K</span>
+                                    style="background: var(--gray-100); padding: 4px 12px; border-radius: 12px; font-size: 0.85rem; color: var(--text-dark);">Pre-K</span>
                             </td>
                             <td style="padding: 1rem;"><span
                                     style="color: var(--secondary); font-weight: 700; background: rgba(251, 191, 36, 0.1); padding: 4px 12px; border-radius: 12px;">Pending</span>
                             </td>
                             <td style="padding: 1rem;"><button class="btn btn-sm btn-outline">View</button></td>
                         </tr>
-                        <tr style="background: var(--white); box-shadow: var(--shadow-sm); border-radius: 8px;">
+                        <tr style="background: var(--bg-secondary); box-shadow: var(--shadow-sm); border-radius: 8px;">
                             <td style="padding: 1rem; font-weight: 600;">Sophia Chen</td>
                             <td style="padding: 1rem;"><span
-                                    style="background: var(--gray-100); padding: 4px 12px; border-radius: 12px; font-size: 0.85rem;">Toddler</span>
+                                    style="background: var(--gray-100); padding: 4px 12px; border-radius: 12px; font-size: 0.85rem; color: var(--text-dark);">Toddler</span>
                             </td>
                             <td style="padding: 1rem;"><span
                                     style="color: var(--accent-mint); font-weight: 700; background: rgba(52, 211, 153, 0.1); padding: 4px 12px; border-radius: 12px;">Approved</span>

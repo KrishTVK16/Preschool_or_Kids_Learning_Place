@@ -610,3 +610,42 @@
 /* ============================================
    END OF RESPONSIVE STYLES
    ============================================ */
+/* Welcome Widget Responsive */
+@media (max-width: 780px) {
+  .welcome-widget {
+    flex-direction: column !important;
+    text-align: center;
+    padding-bottom: 0 !important;
+  }
+
+  .welcome-widget .welcome-content {
+    padding-right: 0 !important;
+    margin-bottom: var(--spacing-lg);
+    width: 100%;
+  }
+
+  .welcome-widget .welcome-image {
+    width: 100% !important;
+    max-width: 250px;
+    margin: 0 auto;
+  }
+
+  .welcome-widget .welcome-content>div {
+    justify-content: center;
+  }
+}
+
+
+/* ============================================
+   PATCH: Fix Programs/Index Grid Alignment (600px-800px)
+   ============================================ */
+@media (min-width: 601px) and (max-width: 800px) {
+  .stats-grid {
+    grid-template-columns: repeat(1, 1fr) !important;
+  }
+
+  .info-grid-2x2 {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+  }
+}

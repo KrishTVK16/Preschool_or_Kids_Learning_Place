@@ -24,6 +24,12 @@
   --accent-rose: #FB7185;
   /* Rose-400 */
 
+  /* Missing Variables Mapped to Accents/Theme */
+  --mint-green: #34D399;
+  --lavender-purple: #A78BFA;
+  --sky-blue: #38BDF8;
+  --sunshine-yellow: #FBBF24;
+
   /* Neutral Colors */
   --white: #FFFFFF;
   --off-white: #FAF9F6;
@@ -76,6 +82,9 @@
   --gradient-primary: linear-gradient(135deg, #7C3AED 0%, #8B5CF6 100%);
   --gradient-sunshine: linear-gradient(135deg, #FBBF24 0%, #F59E0B 100%);
   --gradient-sky: linear-gradient(135deg, #38BDF8 0%, #0EA5E9 100%);
+  --gradient-mint: linear-gradient(135deg, #34D399 0%, #10B981 100%);
+  --gradient-lavender: linear-gradient(135deg, #A78BFA 0%, #8B5CF6 100%);
+  --gradient-calm: linear-gradient(135deg, #F3F4F6 0%, #E5E7EB 100%);
   --gradient-bg: linear-gradient(180deg, #FAF9F6 0%, #F3E8FF 100%);
 
   /* Glassmorphism */
@@ -973,13 +982,16 @@ ol {
   display: flex;
   flex-direction: column;
   gap: var(--spacing-lg);
+  text-align: center;
+  align-items: center;
 }
 
 .hero-text-side h1 {
   font-size: clamp(2.5rem, 5vw, 3.5rem);
   line-height: 1.2;
-  color: var(--text-dark);
+  color: var(--text-primary);
   margin-bottom: 0;
+  text-align: center;
 }
 
 .hero-support-text {
@@ -987,6 +999,7 @@ ol {
   line-height: 1.7;
   color: var(--text-secondary);
   margin-bottom: 0;
+  text-align: center;
 }
 
 .hero-features-list {
@@ -2030,7 +2043,7 @@ ol {
    ============================================ */
 
 .theme-toggle {
-  background: none;
+  background: var(--bg-primary);
   border: 2px solid var(--border-color);
   border-radius: var(--radius-full);
   width: 40px;
@@ -2327,37 +2340,72 @@ body.mobile-menu-open .header-actions a[href="register.html"] {
    ============================================ */
 /* Added for Activities Page Badges */
 .activity-badge {
-    background: rgba(124, 58, 237, 0.1);
-    border: 1px solid var(--primary);
-    border-radius: var(--radius-full);
-    padding: 0.25rem 0.75rem;
-    font-size: 0.75rem;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-    color: var(--primary);
-    backdrop-filter: blur(4px);
+  background: rgba(124, 58, 237, 0.1);
+  border: 1px solid var(--primary);
+  border-radius: var(--radius-full);
+  padding: 0.25rem 0.75rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--primary);
+  backdrop-filter: blur(4px);
 }
 
 [data-theme='dark'] .activity-badge {
-    background: rgba(255, 255, 255, 0.1);
-    color: var(--text-dark-primary);
-    border-color: rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.1);
+  color: var(--text-dark-primary);
+  border-color: rgba(255, 255, 255, 0.2);
 }
 
 /* BOOSTER: Schedule Card Hover Effects */
 .schedule-day-card {
-    transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
-    border: 1px solid transparent;
-    background: var(--bg-primary);
-    border-radius: var(--radius-md);
-    padding: var(--spacing-md);
-    box-shadow: var(--shadow-sm);
+  transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+  border: 1px solid transparent;
+  background: var(--bg-primary);
+  border-radius: var(--radius-md);
+  padding: var(--spacing-md);
+  box-shadow: var(--shadow-sm);
 }
 
 .schedule-day-card:hover {
-    transform: translateY(-5px);
-    box-shadow: var(--shadow-float);
-    border-color: var(--primary);
-    background: var(--white);
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-float);
+  border-color: var(--primary);
+  background: var(--white);
 }
+
+.text-always-dark {
+  color: #1F2937 !important;
+}
+
+/* Enforce dark text for children of text-always-dark container */
+.text-always-dark .feature-list li,
+.text-always-dark p,
+.text-always-dark h1,
+.text-always-dark h2,
+.text-always-dark h3,
+.text-always-dark h4,
+.text-always-dark h5,
+.text-always-dark h6 {
+  color: #1F2937 !important;
+}
+
+/* Welcome Widget */
+.welcome-widget {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+/* Admin Table Header Style */
+.admin-table th {
+  background-color: var(--bg-secondary);
+  color: var(--text-secondary);
+  font-weight: 600;
+}
+
+.text-warning { color: var(--secondary); }
+.text-danger { color: var(--accent-rose); }
+.text-info { color: var(--accent-sky); }
+.text-success { color: var(--accent-mint); }
+.text-purple { color: var(--primary); }
