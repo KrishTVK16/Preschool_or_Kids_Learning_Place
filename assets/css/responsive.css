@@ -264,7 +264,7 @@
   }
 
   .hero-visual-side {
-    order: -1;
+    /* order: -1; Removed to show text first */
   }
 
   .hero-cta-primary {

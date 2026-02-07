@@ -76,16 +76,7 @@
 
         <!-- Quick Actions Grid -->
         <h2 class="mb-md">Quick Actions</h2>
-        <div class="stats-grid mb-xl"
-            style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: var(--spacing-md);">
-            <a href="admissions.html" class="card card-glass text-center btn-motion"
-                style="justify-content: center; text-decoration: none; border-bottom: 4px solid var(--primary);">
-                <div class="card-icon"
-                    style="background: var(--gradient-primary); color: white; margin-bottom: var(--spacing-sm); width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; margin: 0 auto;">
-                    <i class="fas fa-user-plus"></i>
-                </div>
-                <h4 style="margin: 1rem 0 0; color: var(--text-primary);">Add Student</h4>
-            </a>
+        <div class="stats-grid mb-xl admin-quick-actions">
 
             <a href="#announcements" class="card card-glass text-center btn-motion"
                 style="justify-content: center; text-decoration: none; border-bottom: 4px solid var(--secondary);">
@@ -113,6 +104,14 @@
                 </div>
                 <h4 style="margin: 1rem 0 0; color: var(--text-primary);">Billing</h4>
             </a>
+            <a href="admissions.html" class="card card-glass text-center btn-motion"
+                style="justify-content: center; text-decoration: none; border-bottom: 4px solid var(--primary);">
+                <div class="card-icon"
+                    style="background: var(--gradient-primary); color: white; margin-bottom: var(--spacing-sm); width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; margin: 0 auto;">
+                    <i class="fas fa-user-plus"></i>
+                </div>
+                <h4 style="margin: 1rem 0 0; color: var(--text-primary);">Add Student</h4>
+            </a>
 
             <a href="teachers.html" class="card card-glass text-center btn-motion"
                 style="justify-content: center; text-decoration: none; border-bottom: 4px solid var(--accent-lavender);">
@@ -132,14 +131,6 @@
                 <h4 style="margin: 1rem 0 0; color: var(--text-primary);">Activities</h4>
             </a>
 
-            <a href="gallery.html" class="card card-glass text-center btn-motion"
-                style="justify-content: center; text-decoration: none; border-bottom: 4px solid var(--accent-gold);">
-                <div class="card-icon"
-                    style="background: linear-gradient(135deg, #FCD34D, #F59E0B); color: white; margin-bottom: var(--spacing-sm); width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; margin: 0 auto;">
-                    <i class="fas fa-images"></i>
-                </div>
-                <h4 style="margin: 1rem 0 0; color: var(--text-primary);">Gallery</h4>
-            </a>
         </div>
 
         <!-- Recent Activity Table (Styled) -->
@@ -202,10 +193,15 @@
                 </div>
                 <div class="announcement-list">
                     <div class="card card-secondary mb-md" style="border-left: 4px solid var(--secondary);">
-                        <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: var(--spacing-sm);">
+                        <div
+                            style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: var(--spacing-sm);">
                             <div style="flex: 1; min-width: 200px;">
-                                <h4 style="color: var(--primary); margin-bottom: var(--spacing-xs); word-wrap: break-word; overflow-wrap: break-word;">School Holiday Next Monday</h4>
-                                <p style="color: var(--text-secondary); margin-bottom: var(--spacing-sm); word-wrap: break-word; overflow-wrap: break-word;">School will be closed on Monday for professional development day.</p>
+                                <h4
+                                    style="color: var(--primary); margin-bottom: var(--spacing-xs); word-wrap: break-word; overflow-wrap: break-word;">
+                                    School Holiday Next Monday</h4>
+                                <p
+                                    style="color: var(--text-secondary); margin-bottom: var(--spacing-sm); word-wrap: break-word; overflow-wrap: break-word;">
+                                    School will be closed on Monday for professional development day.</p>
                                 <small style="color: var(--text-muted);">Posted: 2 days ago</small>
                             </div>
                             <div style="display: flex; gap: var(--spacing-sm); flex-shrink: 0;">
@@ -215,10 +211,15 @@
                         </div>
                     </div>
                     <div class="card card-secondary mb-md" style="border-left: 4px solid var(--accent-sky);">
-                        <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: var(--spacing-sm);">
+                        <div
+                            style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: var(--spacing-sm);">
                             <div style="flex: 1; min-width: 200px;">
-                                <h4 style="color: var(--primary); margin-bottom: var(--spacing-xs); word-wrap: break-word; overflow-wrap: break-word;">Parent-Teacher Meetings</h4>
-                                <p style="color: var(--text-secondary); margin-bottom: var(--spacing-sm); word-wrap: break-word; overflow-wrap: break-word;">Schedule your parent-teacher conferences for next week.</p>
+                                <h4
+                                    style="color: var(--primary); margin-bottom: var(--spacing-xs); word-wrap: break-word; overflow-wrap: break-word;">
+                                    Parent-Teacher Meetings</h4>
+                                <p
+                                    style="color: var(--text-secondary); margin-bottom: var(--spacing-sm); word-wrap: break-word; overflow-wrap: break-word;">
+                                    Schedule your parent-teacher conferences for next week.</p>
                                 <small style="color: var(--text-muted);">Posted: 1 week ago</small>
                             </div>
                             <div style="display: flex; gap: var(--spacing-sm); flex-shrink: 0;">
@@ -240,29 +241,51 @@
                         <i class="fas fa-plus"></i> Add Event
                     </button>
                 </div>
-                <div class="calendar-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: var(--spacing-md);">
+                <div class="calendar-grid"
+                    style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: var(--spacing-md);">
                     <div class="card card-secondary text-center" style="border-top: 4px solid var(--accent-mint);">
                         <div style="padding: var(--spacing-md);">
-                            <div style="font-size: 2rem; font-weight: 700; color: var(--accent-mint); margin-bottom: var(--spacing-xs);">15</div>
-                            <div style="color: var(--text-secondary); margin-bottom: var(--spacing-sm);">December 2024</div>
-                            <h5 style="color: var(--text-primary); margin-bottom: var(--spacing-xs); word-wrap: break-word; overflow-wrap: break-word;">Winter Concert</h5>
-                            <p style="color: var(--text-muted); font-size: 0.9rem; word-wrap: break-word; overflow-wrap: break-word;">6:00 PM - Auditorium</p>
+                            <div
+                                style="font-size: 2rem; font-weight: 700; color: var(--accent-mint); margin-bottom: var(--spacing-xs);">
+                                15</div>
+                            <div style="color: var(--text-secondary); margin-bottom: var(--spacing-sm);">December 2024
+                            </div>
+                            <h5
+                                style="color: var(--text-primary); margin-bottom: var(--spacing-xs); word-wrap: break-word; overflow-wrap: break-word;">
+                                Winter Concert</h5>
+                            <p
+                                style="color: var(--text-muted); font-size: 0.9rem; word-wrap: break-word; overflow-wrap: break-word;">
+                                6:00 PM - Auditorium</p>
                         </div>
                     </div>
                     <div class="card card-secondary text-center" style="border-top: 4px solid var(--secondary);">
                         <div style="padding: var(--spacing-md);">
-                            <div style="font-size: 2rem; font-weight: 700; color: var(--secondary); margin-bottom: var(--spacing-xs);">20</div>
-                            <div style="color: var(--text-secondary); margin-bottom: var(--spacing-sm);">December 2024</div>
-                            <h5 style="color: var(--text-primary); margin-bottom: var(--spacing-xs); word-wrap: break-word; overflow-wrap: break-word;">Holiday Party</h5>
-                            <p style="color: var(--text-muted); font-size: 0.9rem; word-wrap: break-word; overflow-wrap: break-word;">2:00 PM - Classroom</p>
+                            <div
+                                style="font-size: 2rem; font-weight: 700; color: var(--secondary); margin-bottom: var(--spacing-xs);">
+                                20</div>
+                            <div style="color: var(--text-secondary); margin-bottom: var(--spacing-sm);">December 2024
+                            </div>
+                            <h5
+                                style="color: var(--text-primary); margin-bottom: var(--spacing-xs); word-wrap: break-word; overflow-wrap: break-word;">
+                                Holiday Party</h5>
+                            <p
+                                style="color: var(--text-muted); font-size: 0.9rem; word-wrap: break-word; overflow-wrap: break-word;">
+                                2:00 PM - Classroom</p>
                         </div>
                     </div>
                     <div class="card card-secondary text-center" style="border-top: 4px solid var(--accent-sky);">
                         <div style="padding: var(--spacing-md);">
-                            <div style="font-size: 2rem; font-weight: 700; color: var(--accent-sky); margin-bottom: var(--spacing-xs);">5</div>
-                            <div style="color: var(--text-secondary); margin-bottom: var(--spacing-sm);">January 2025</div>
-                            <h5 style="color: var(--text-primary); margin-bottom: var(--spacing-xs); word-wrap: break-word; overflow-wrap: break-word;">First Day Back</h5>
-                            <p style="color: var(--text-muted); font-size: 0.9rem; word-wrap: break-word; overflow-wrap: break-word;">9:00 AM - Regular Schedule</p>
+                            <div
+                                style="font-size: 2rem; font-weight: 700; color: var(--accent-sky); margin-bottom: var(--spacing-xs);">
+                                5</div>
+                            <div style="color: var(--text-secondary); margin-bottom: var(--spacing-sm);">January 2025
+                            </div>
+                            <h5
+                                style="color: var(--text-primary); margin-bottom: var(--spacing-xs); word-wrap: break-word; overflow-wrap: break-word;">
+                                First Day Back</h5>
+                            <p
+                                style="color: var(--text-muted); font-size: 0.9rem; word-wrap: break-word; overflow-wrap: break-word;">
+                                9:00 AM - Regular Schedule</p>
                         </div>
                     </div>
                 </div>
@@ -290,25 +313,35 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <tr style="background: var(--bg-secondary); box-shadow: var(--shadow-sm); border-radius: 8px;">
+                            <tr
+                                style="background: var(--bg-secondary); box-shadow: var(--shadow-sm); border-radius: 8px;">
                                 <td style="padding: 1rem; font-weight: 600;">Emma Wilson</td>
                                 <td style="padding: 1rem;">$450</td>
                                 <td style="padding: 1rem;">Dec 15, 2024</td>
-                                <td style="padding: 1rem;"><span style="color: var(--accent-mint); font-weight: 700; background: rgba(52, 211, 153, 0.1); padding: 4px 12px; border-radius: 12px;">Paid</span></td>
+                                <td style="padding: 1rem;"><span
+                                        style="color: var(--accent-mint); font-weight: 700; background: rgba(52, 211, 153, 0.1); padding: 4px 12px; border-radius: 12px;">Paid</span>
+                                </td>
                                 <td style="padding: 1rem;"><button class="btn btn-sm btn-outline">Receipt</button></td>
                             </tr>
-                            <tr style="background: var(--bg-secondary); box-shadow: var(--shadow-sm); border-radius: 8px;">
+                            <tr
+                                style="background: var(--bg-secondary); box-shadow: var(--shadow-sm); border-radius: 8px;">
                                 <td style="padding: 1rem; font-weight: 600;">Lucas Martinez</td>
                                 <td style="padding: 1rem;">$450</td>
                                 <td style="padding: 1rem;">Dec 15, 2024</td>
-                                <td style="padding: 1rem;"><span style="color: var(--secondary); font-weight: 700; background: rgba(251, 191, 36, 0.1); padding: 4px 12px; border-radius: 12px;">Pending</span></td>
-                                <td style="padding: 1rem;"><button class="btn btn-sm btn-outline">Send Reminder</button></td>
+                                <td style="padding: 1rem;"><span
+                                        style="color: var(--secondary); font-weight: 700; background: rgba(251, 191, 36, 0.1); padding: 4px 12px; border-radius: 12px;">Pending</span>
+                                </td>
+                                <td style="padding: 1rem;"><button class="btn btn-sm btn-outline">Send Reminder</button>
+                                </td>
                             </tr>
-                            <tr style="background: var(--bg-secondary); box-shadow: var(--shadow-sm); border-radius: 8px;">
+                            <tr
+                                style="background: var(--bg-secondary); box-shadow: var(--shadow-sm); border-radius: 8px;">
                                 <td style="padding: 1rem; font-weight: 600;">Sophia Chen</td>
                                 <td style="padding: 1rem;">$450</td>
                                 <td style="padding: 1rem;">Dec 15, 2024</td>
-                                <td style="padding: 1rem;"><span style="color: var(--accent-mint); font-weight: 700; background: rgba(52, 211, 153, 0.1); padding: 4px 12px; border-radius: 12px;">Paid</span></td>
+                                <td style="padding: 1rem;"><span
+                                        style="color: var(--accent-mint); font-weight: 700; background: rgba(52, 211, 153, 0.1); padding: 4px 12px; border-radius: 12px;">Paid</span>
+                                </td>
                                 <td style="padding: 1rem;"><button class="btn btn-sm btn-outline">Receipt</button></td>
                             </tr>
                         </tbody>
